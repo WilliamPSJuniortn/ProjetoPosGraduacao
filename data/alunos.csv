@@ -1,0 +1,51 @@
+id_aluno,nome,curso,periodo,cr,faltas,situacao_financeira,reprovacoes,idade,evadiu
+1,Ana Lima,Ciência da Computação,3,7.8,5,estavel,0,21,0
+2,Bruno Souza,Engenharia Civil,2,5.2,18,dificuldade,2,20,1
+3,Carla Mendes,Administração,4,8.5,2,estavel,0,22,0
+4,Diego Ferreira,Direito,1,4.1,25,dificuldade,3,19,1
+5,Elena Costa,Medicina,6,9.2,1,estavel,0,24,0
+6,Fábio Rocha,Engenharia Civil,2,3.8,30,dificuldade,4,20,1
+7,Gabriela Nunes,Ciência da Computação,5,8.1,4,estavel,0,23,0
+8,Henrique Alves,Administração,1,6.0,12,intermediaria,1,18,0
+9,Isabella Martins,Direito,3,7.3,7,estavel,0,21,0
+10,João Pedro,Medicina,2,4.5,22,dificuldade,2,20,1
+11,Karla Santos,Ciência da Computação,4,8.9,3,estavel,0,22,0
+12,Lucas Oliveira,Engenharia Civil,3,5.5,16,intermediaria,2,21,1
+13,Marina Pereira,Administração,2,7.0,8,estavel,0,20,0
+14,Nathan Gomes,Direito,4,3.2,28,dificuldade,5,22,1
+15,Olivia Castro,Medicina,5,9.5,0,estavel,0,23,0
+16,Paulo Henrique,Ciência da Computação,1,6.8,10,intermediaria,1,19,0
+17,Quirino Barbosa,Engenharia Civil,4,4.0,24,dificuldade,3,22,1
+18,Renata Dias,Administração,6,8.3,3,estavel,0,24,0
+19,Samuel Torres,Direito,2,5.8,14,intermediaria,1,20,0
+20,Tatiana Freitas,Medicina,3,7.6,6,estavel,0,21,0
+21,Ubirajara Lopes,Ciência da Computação,2,3.5,26,dificuldade,4,20,1
+22,Vanessa Lima,Engenharia Civil,5,8.7,2,estavel,0,23,0
+23,Wagner Moura,Administração,3,6.2,11,intermediaria,1,21,0
+24,Ximena Ramos,Direito,1,4.8,20,dificuldade,2,19,1
+25,Yara Cunha,Medicina,4,9.0,1,estavel,0,22,0
+26,Zeca Pagodinho,Ciência da Computação,6,7.9,5,estavel,0,24,0
+27,Alice Borges,Engenharia Civil,1,5.0,17,dificuldade,2,19,1
+28,Bernardo Silva,Administração,4,8.0,4,estavel,0,22,0
+29,Camila Azevedo,Direito,5,6.5,9,intermediaria,1,23,0
+30,Danilo Matos,Medicina,2,4.3,23,dificuldade,3,20,1
+31,Eduardo Vieira,Ciência da Computação,3,7.5,6,estavel,0,21,0
+32,Fernanda Leal,Engenharia Civil,6,8.8,2,estavel,0,24,0
+33,Gustavo Pinto,Administração,2,3.9,27,dificuldade,4,20,1
+34,Helena Cruz,Direito,4,8.2,4,estavel,0,22,0
+35,Igor Nascimento,Medicina,1,5.5,13,intermediaria,1,19,0
+36,Julia Teixeira,Ciência da Computação,5,9.1,1,estavel,0,23,0
+37,Kevin Andrade,Engenharia Civil,3,4.7,21,dificuldade,3,21,1
+38,Larissa Fonseca,Administração,5,7.8,5,estavel,0,23,0
+39,Marcelo Ribeiro,Direito,2,6.0,12,intermediaria,1,20,0
+40,Natalia Campos,Medicina,6,9.3,0,estavel,0,24,0
+41,Otávio Cardoso,Ciência da Computação,1,4.2,24,dificuldade,3,19,1
+42,Patricia Araújo,Engenharia Civil,4,8.4,3,estavel,0,22,0
+43,Rafael Guimarães,Administração,3,5.7,15,intermediaria,2,21,0
+44,Sabrina Monteiro,Direito,6,7.2,7,estavel,0,24,0
+45,Thiago Carvalho,Medicina,3,4.0,26,dificuldade,4,21,1
+46,Ursula Pires,Ciência da Computação,4,8.6,3,estavel,0,22,0
+47,Victor Hugo,Engenharia Civil,2,5.3,18,dificuldade,2,20,1
+48,Wanessa Almeida,Administração,5,7.5,5,estavel,0,23,0
+49,Xenofonte Lima,Direito,3,3.6,29,dificuldade,5,21,1
+50,Yasmin Rodrigues,Medicina,4,8.9,2,estavel,0,22,0
