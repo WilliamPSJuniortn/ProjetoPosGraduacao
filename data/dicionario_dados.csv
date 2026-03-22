@@ -1,0 +1,11 @@
+coluna,tipo_python,descricao,valores_possiveis,pct_ausentes_antes (%),pct_ausentes_depois (%)
+id_aluno,int64,Identificador único do aluno,1 a 1500,0.0,0.0
+nome,object,Nome completo do aluno,Texto livre,0.0,0.0
+curso,object,Curso de vinculação do aluno,Ciência da Computação | Engenharia Civil | Administração | Direito | Medicina,0.0,0.0
+periodo,float64,Período atual do aluno no curso,min=1 | max=8,3.0,0.0
+cr,float64,Coeficiente de Rendimento Acadêmico,min=2.0 | max=9.7,3.0,0.0
+faltas,float64,Número total de faltas do aluno,min=0 | max=27,3.0,0.0
+situacao_financeira,object,Situação financeira declarada pelo aluno,estavel | intermediaria | dificuldade,0.0,0.0
+reprovacoes,float64,Quantidade de reprovações acumuladas,min=0 | max=5,3.0,0.0
+idade,float64,Idade do aluno em anos,min=17 | max=38,3.0,0.0
+evadiu,int64,Variável alvo — indica se o aluno evadiu,0 = Não evadiu | 1 = Evadiu,0.0,0.0

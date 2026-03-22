@@ -1,51 +1,1501 @@
 id_aluno,nome,curso,periodo,cr,faltas,situacao_financeira,reprovacoes,idade,evadiu
-1,Ana Lima,Ciência da Computação,3,7.8,5,estavel,0,21,0
-2,Bruno Souza,Engenharia Civil,2,5.2,18,dificuldade,2,20,1
-3,Carla Mendes,Administração,4,8.5,2,estavel,0,22,0
-4,Diego Ferreira,Direito,1,4.1,25,dificuldade,3,19,1
-5,Elena Costa,Medicina,6,9.2,1,estavel,0,24,0
-6,Fábio Rocha,Engenharia Civil,2,3.8,30,dificuldade,4,20,1
-7,Gabriela Nunes,Ciência da Computação,5,8.1,4,estavel,0,23,0
-8,Henrique Alves,Administração,1,6.0,12,intermediaria,1,18,0
-9,Isabella Martins,Direito,3,7.3,7,estavel,0,21,0
-10,João Pedro,Medicina,2,4.5,22,dificuldade,2,20,1
-11,Karla Santos,Ciência da Computação,4,8.9,3,estavel,0,22,0
-12,Lucas Oliveira,Engenharia Civil,3,5.5,16,intermediaria,2,21,1
-13,Marina Pereira,Administração,2,7.0,8,estavel,0,20,0
-14,Nathan Gomes,Direito,4,3.2,28,dificuldade,5,22,1
-15,Olivia Castro,Medicina,5,9.5,0,estavel,0,23,0
-16,Paulo Henrique,Ciência da Computação,1,6.8,10,intermediaria,1,19,0
-17,Quirino Barbosa,Engenharia Civil,4,4.0,24,dificuldade,3,22,1
-18,Renata Dias,Administração,6,8.3,3,estavel,0,24,0
-19,Samuel Torres,Direito,2,5.8,14,intermediaria,1,20,0
-20,Tatiana Freitas,Medicina,3,7.6,6,estavel,0,21,0
-21,Ubirajara Lopes,Ciência da Computação,2,3.5,26,dificuldade,4,20,1
-22,Vanessa Lima,Engenharia Civil,5,8.7,2,estavel,0,23,0
-23,Wagner Moura,Administração,3,6.2,11,intermediaria,1,21,0
-24,Ximena Ramos,Direito,1,4.8,20,dificuldade,2,19,1
-25,Yara Cunha,Medicina,4,9.0,1,estavel,0,22,0
-26,Zeca Pagodinho,Ciência da Computação,6,7.9,5,estavel,0,24,0
-27,Alice Borges,Engenharia Civil,1,5.0,17,dificuldade,2,19,1
-28,Bernardo Silva,Administração,4,8.0,4,estavel,0,22,0
-29,Camila Azevedo,Direito,5,6.5,9,intermediaria,1,23,0
-30,Danilo Matos,Medicina,2,4.3,23,dificuldade,3,20,1
-31,Eduardo Vieira,Ciência da Computação,3,7.5,6,estavel,0,21,0
-32,Fernanda Leal,Engenharia Civil,6,8.8,2,estavel,0,24,0
-33,Gustavo Pinto,Administração,2,3.9,27,dificuldade,4,20,1
-34,Helena Cruz,Direito,4,8.2,4,estavel,0,22,0
-35,Igor Nascimento,Medicina,1,5.5,13,intermediaria,1,19,0
-36,Julia Teixeira,Ciência da Computação,5,9.1,1,estavel,0,23,0
-37,Kevin Andrade,Engenharia Civil,3,4.7,21,dificuldade,3,21,1
-38,Larissa Fonseca,Administração,5,7.8,5,estavel,0,23,0
-39,Marcelo Ribeiro,Direito,2,6.0,12,intermediaria,1,20,0
-40,Natalia Campos,Medicina,6,9.3,0,estavel,0,24,0
-41,Otávio Cardoso,Ciência da Computação,1,4.2,24,dificuldade,3,19,1
-42,Patricia Araújo,Engenharia Civil,4,8.4,3,estavel,0,22,0
-43,Rafael Guimarães,Administração,3,5.7,15,intermediaria,2,21,0
-44,Sabrina Monteiro,Direito,6,7.2,7,estavel,0,24,0
-45,Thiago Carvalho,Medicina,3,4.0,26,dificuldade,4,21,1
-46,Ursula Pires,Ciência da Computação,4,8.6,3,estavel,0,22,0
-47,Victor Hugo,Engenharia Civil,2,5.3,18,dificuldade,2,20,1
-48,Wanessa Almeida,Administração,5,7.5,5,estavel,0,23,0
-49,Xenofonte Lima,Direito,3,3.6,29,dificuldade,5,21,1
-50,Yasmin Rodrigues,Medicina,4,8.9,2,estavel,0,22,0
+1,Fábio Freitas,Ciência da Computação,5.0,4.2,18.0,dificuldade,6.0,21.0,1
+2,Fernanda Moura,Administração,8.0,6.1,3.0,intermediaria,0.0,20.0,0
+3,Caio Duarte,Direito,1.0,6.9,6.0,intermediaria,1.0,23.0,0
+4,Marina Siqueira,Direito,5.0,5.2,10.0,estavel,0.0,25.0,0
+5,Valentina Nunes,Direito,7.0,8.5,3.0,intermediaria,0.0,,0
+6,Marina Leite,Administração,1.0,6.5,5.0,intermediaria,0.0,31.0,0
+7,Nara Pires,Ciência da Computação,4.0,,4.0,intermediaria,2.0,21.0,0
+8,Ana Amaral,Direito,8.0,7.0,11.0,estavel,1.0,21.0,0
+9,Thiago Andrade,Ciência da Computação,4.0,6.1,4.0,estavel,0.0,29.0,0
+10,Patricia Neto,Medicina,,6.3,6.0,estavel,0.0,21.0,0
+11,Igor Andrade,Medicina,5.0,4.8,12.0,intermediaria,2.0,26.0,1
+12,Renata Campos,Direito,1.0,6.6,0.0,intermediaria,0.0,25.0,0
+13,Isabella Nunes,Ciência da Computação,7.0,7.2,12.0,intermediaria,0.0,23.0,0
+14,Wesley Dias,Engenharia Civil,2.0,3.1,5.0,intermediaria,0.0,22.0,1
+15,Nicolas Silva,Administração,2.0,8.1,7.0,estavel,0.0,26.0,0
+16,Marina Machado,Engenharia Civil,8.0,7.4,4.0,estavel,1.0,29.0,0
+17,Patricia Torres,Engenharia Civil,4.0,2.3,,dificuldade,2.0,31.0,1
+18,Nathan Ferreira,Direito,7.0,6.6,7.0,estavel,0.0,23.0,0
+19,Luana Magalhães,Direito,8.0,6.0,7.0,intermediaria,3.0,25.0,0
+20,Carlos Neto,Medicina,6.0,6.8,10.0,dificuldade,2.0,22.0,0
+21,Pedro Cardoso,Engenharia Civil,2.0,6.6,1.0,intermediaria,0.0,23.0,0
+22,Nicolas Ramos,Ciência da Computação,1.0,4.8,2.0,intermediaria,4.0,,1
+23,Guilherme Barbosa,Engenharia Civil,5.0,5.8,11.0,estavel,0.0,29.0,0
+24,Vanessa Magalhães,Engenharia Civil,7.0,3.4,31.0,intermediaria,4.0,22.0,1
+25,Vanessa Ramos,Ciência da Computação,3.0,6.4,5.0,intermediaria,0.0,21.0,0
+26,Camila Borges,Medicina,7.0,6.0,7.0,intermediaria,1.0,22.0,0
+27,Ximena Correia,Engenharia Civil,1.0,6.4,2.0,intermediaria,1.0,21.0,0
+28,Ursula Gonçalves,Administração,1.0,5.4,18.0,intermediaria,3.0,25.0,1
+29,Carla Machado,Engenharia Civil,6.0,6.4,7.0,dificuldade,0.0,19.0,0
+30,Ana Pinto,Engenharia Civil,3.0,7.5,6.0,intermediaria,0.0,24.0,0
+31,Queila Andrade,Engenharia Civil,1.0,7.4,10.0,estavel,1.0,25.0,0
+32,Karla Ramos,Medicina,3.0,7.6,4.0,estavel,2.0,23.0,0
+33,Gabriela Fonseca,Ciência da Computação,7.0,6.8,2.0,estavel,0.0,24.0,0
+34,Lucas Teixeira,Engenharia Civil,2.0,3.7,19.0,intermediaria,,21.0,1
+35,Rafael Freitas,Administração,7.0,9.6,3.0,intermediaria,1.0,22.0,0
+36,Joana Siqueira,Engenharia Civil,1.0,2.6,11.0,intermediaria,1.0,24.0,1
+37,Caio Dias,Engenharia Civil,6.0,3.4,38.0,intermediaria,0.0,17.0,1
+38,Isabela Cardoso,Ciência da Computação,6.0,5.4,2.0,intermediaria,0.0,19.0,0
+39,Juliana Braga,Direito,8.0,,3.0,intermediaria,1.0,,0
+40,Adriana Martins,Direito,6.0,5.4,4.0,dificuldade,0.0,20.0,0
+41,Giovanna Braga,Administração,6.0,6.9,0.0,intermediaria,0.0,27.0,0
+42,Patricia Carvalho,Administração,6.0,7.3,9.0,dificuldade,1.0,24.0,0
+43,Priscila Medeiros,Ciência da Computação,7.0,6.9,4.0,intermediaria,0.0,19.0,0
+44,Joana Oliveira,Direito,6.0,6.9,13.0,estavel,2.0,19.0,0
+45,Samuel Neto,Ciência da Computação,4.0,6.6,7.0,intermediaria,1.0,22.0,0
+46,Ana Pereira,Medicina,6.0,8.1,4.0,estavel,0.0,26.0,0
+47,Wanessa Braga,Direito,3.0,4.1,13.0,dificuldade,2.0,26.0,1
+48,Fernanda Mendes,Medicina,4.0,6.7,37.0,intermediaria,3.0,17.0,1
+49,Paulo Santos,Direito,2.0,4.1,8.0,dificuldade,2.0,21.0,1
+50,Danilo Alves,Administração,3.0,5.5,11.0,intermediaria,0.0,22.0,0
+51,Fernanda Azevedo,Ciência da Computação,1.0,7.1,2.0,dificuldade,2.0,19.0,0
+52,Yasmin Oliveira,Direito,1.0,4.5,5.0,intermediaria,1.0,25.0,1
+53,Ulisses Freitas,Direito,1.0,7.1,2.0,estavel,2.0,24.0,0
+54,Ana Carvalho,Medicina,4.0,3.7,24.0,dificuldade,1.0,22.0,1
+55,Vanessa Leal,Medicina,5.0,6.4,2.0,intermediaria,2.0,22.0,0
+56,Flávia Santos,Direito,4.0,8.1,2.0,estavel,1.0,25.0,0
+57,Carla Oliveira,Administração,1.0,5.3,3.0,estavel,1.0,26.0,0
+58,Rodrigo Mendes,Engenharia Civil,7.0,8.5,4.0,intermediaria,0.0,25.0,0
+59,Sônia Braga,Administração,6.0,6.6,1.0,estavel,0.0,,0
+60,Ximena Brito,Medicina,8.0,3.9,29.0,dificuldade,3.0,25.0,1
+61,Eduardo Magalhães,Administração,4.0,6.6,,estavel,0.0,20.0,0
+62,Giovanna Ferreira,Medicina,5.0,3.1,40.0,dificuldade,5.0,22.0,1
+63,Beatriz Magalhães,Administração,8.0,5.3,6.0,estavel,0.0,28.0,0
+64,Victor Alves,Administração,2.0,5.8,3.0,estavel,1.0,22.0,0
+65,Juliana Gomes,Medicina,3.0,4.3,32.0,dificuldade,4.0,20.0,1
+66,Marina Pereira,Administração,7.0,5.8,9.0,intermediaria,0.0,24.0,0
+67,Wagner Cardoso,Medicina,1.0,7.7,0.0,intermediaria,1.0,26.0,0
+68,Victor Amaral,Medicina,3.0,7.0,10.0,estavel,0.0,20.0,0
+69,Bruno Medeiros,Ciência da Computação,3.0,7.5,4.0,intermediaria,0.0,28.0,0
+70,Débora Moreira,Direito,6.0,3.8,35.0,dificuldade,5.0,24.0,1
+71,Roberto Leite,Ciência da Computação,6.0,5.2,13.0,estavel,0.0,24.0,0
+72,Diego Barbosa,Administração,5.0,8.0,6.0,estavel,0.0,17.0,0
+73,Renata Gonçalves,Engenharia Civil,5.0,4.9,30.0,dificuldade,2.0,21.0,1
+74,Ana Campos,Medicina,3.0,4.7,2.0,estavel,0.0,20.0,0
+75,Kevin Carvalho,Medicina,3.0,6.9,9.0,intermediaria,2.0,22.0,0
+76,Helena Leal,Administração,5.0,6.7,0.0,estavel,3.0,22.0,0
+77,Elena Melo,Engenharia Civil,8.0,7.1,1.0,estavel,0.0,20.0,0
+78,Lucas Xavier,Medicina,6.0,7.4,2.0,estavel,0.0,20.0,0
+79,Juliana Medeiros,Medicina,6.0,5.4,,intermediaria,0.0,21.0,0
+80,Rafael Ferreira,Administração,6.0,3.3,36.0,dificuldade,3.0,21.0,1
+81,Renata Pinto,Administração,4.0,3.0,21.0,intermediaria,2.0,17.0,1
+82,Otávio Rodrigues,Administração,5.0,3.5,5.0,estavel,2.0,29.0,0
+83,Thiago Duarte,Direito,2.0,4.0,34.0,estavel,3.0,24.0,1
+84,Beatriz Melo,Medicina,3.0,3.4,33.0,intermediaria,0.0,26.0,1
+85,Lucas Freitas,Engenharia Civil,8.0,5.6,24.0,intermediaria,0.0,36.0,1
+86,Tatiana Magalhães,Administração,1.0,6.5,9.0,intermediaria,0.0,26.0,0
+87,Gustavo Ferreira,Administração,5.0,5.4,6.0,estavel,0.0,26.0,0
+88,Hugo Lima,Administração,1.0,3.5,10.0,dificuldade,4.0,18.0,1
+89,Renata Rezende,Direito,3.0,6.2,1.0,intermediaria,1.0,27.0,0
+90,Iara Assis,Administração,3.0,6.3,2.0,intermediaria,1.0,26.0,0
+91,Wanessa Cunha,Medicina,6.0,8.2,4.0,dificuldade,1.0,23.0,0
+92,Roberto Cunha,Administração,6.0,5.1,1.0,intermediaria,1.0,30.0,0
+93,Luana Moura,Ciência da Computação,8.0,6.8,7.0,estavel,0.0,21.0,0
+94,Victor Pinto,Medicina,6.0,7.6,2.0,estavel,0.0,23.0,0
+95,Isabela Leal,Direito,8.0,6.8,2.0,intermediaria,2.0,19.0,0
+96,Rodrigo Fonseca,Engenharia Civil,3.0,6.8,,estavel,0.0,29.0,0
+97,Valentina Oliveira,Medicina,5.0,5.5,2.0,estavel,1.0,22.0,0
+98,Nicolas Pereira,Direito,6.0,5.1,,estavel,2.0,28.0,0
+99,Gustavo Matos,Medicina,3.0,6.3,22.0,intermediaria,0.0,23.0,1
+100,Ana Medeiros,Direito,5.0,5.3,11.0,intermediaria,2.0,22.0,1
+101,Talita Monteiro,Ciência da Computação,8.0,3.3,20.0,estavel,0.0,26.0,1
+102,Priscila Moura,Ciência da Computação,5.0,6.0,5.0,intermediaria,0.0,21.0,0
+103,Wesley Alves,Medicina,5.0,7.1,0.0,intermediaria,0.0,17.0,0
+104,Hana Batista,Direito,7.0,4.3,15.0,dificuldade,0.0,21.0,1
+105,Guilherme Andrade,Medicina,3.0,7.1,0.0,estavel,1.0,25.0,0
+106,Ximena Dias,Administração,5.0,7.1,2.0,intermediaria,1.0,31.0,0
+107,Danilo Cunha,Medicina,5.0,6.0,1.0,estavel,0.0,23.0,0
+108,Luana Monteiro,Medicina,8.0,6.5,8.0,dificuldade,0.0,31.0,0
+109,Olivia Barbosa,Administração,7.0,4.0,8.0,intermediaria,2.0,19.0,1
+110,Marcelo Campos,Engenharia Civil,5.0,6.5,5.0,intermediaria,1.0,24.0,0
+111,Alexandre Lopes,Engenharia Civil,4.0,5.1,0.0,intermediaria,0.0,21.0,0
+112,Isabela Melo,Administração,2.0,4.0,,intermediaria,0.0,31.0,1
+113,Adriana Siqueira,Administração,1.0,5.6,11.0,intermediaria,0.0,23.0,1
+114,Marina Fonseca,Ciência da Computação,4.0,7.7,7.0,estavel,0.0,20.0,0
+115,Larissa Guimarães,Administração,2.0,6.2,2.0,estavel,1.0,25.0,0
+116,Rafael Leite,Medicina,,,29.0,estavel,4.0,19.0,1
+117,Flávia Nunes,Medicina,2.0,8.0,10.0,intermediaria,4.0,19.0,0
+118,Débora Xavier,Medicina,6.0,6.1,4.0,intermediaria,1.0,25.0,0
+119,Elena Santos,Direito,,3.1,11.0,intermediaria,3.0,22.0,1
+120,Thiago Andrade,Engenharia Civil,,2.8,9.0,intermediaria,1.0,24.0,1
+121,Flávia Ramos,Ciência da Computação,7.0,5.6,2.0,intermediaria,0.0,25.0,0
+122,Wanessa Cavalcanti,Ciência da Computação,1.0,5.6,6.0,intermediaria,2.0,19.0,0
+123,Fernanda Duarte,Engenharia Civil,4.0,6.1,6.0,dificuldade,4.0,29.0,1
+124,Carla Fonseca,Direito,4.0,8.6,11.0,estavel,0.0,21.0,0
+125,Alexandre Borges,Direito,4.0,4.2,30.0,intermediaria,2.0,18.0,1
+126,Hana Andrade,Engenharia Civil,6.0,3.0,12.0,intermediaria,3.0,23.0,1
+127,Tatiana Lima,Engenharia Civil,5.0,5.0,12.0,intermediaria,3.0,22.0,1
+128,Luana Santos,Administração,4.0,5.9,2.0,intermediaria,2.0,34.0,0
+129,Felipe Barros,Administração,5.0,8.3,3.0,estavel,1.0,29.0,0
+130,José Araújo,Direito,8.0,,0.0,intermediaria,,25.0,0
+131,Otávio Lemos,Engenharia Civil,1.0,4.2,19.0,dificuldade,3.0,19.0,1
+132,Victor Viana,Direito,2.0,4.7,4.0,intermediaria,0.0,22.0,1
+133,Hana Duarte,Medicina,6.0,5.0,27.0,dificuldade,0.0,19.0,1
+134,Ulisses Medeiros,Ciência da Computação,8.0,7.3,4.0,estavel,,30.0,0
+135,Isabela Nascimento,Medicina,3.0,6.7,0.0,intermediaria,2.0,20.0,0
+136,Talita Souza,Administração,4.0,3.7,,intermediaria,2.0,23.0,1
+137,Isabella Rocha,Ciência da Computação,4.0,6.6,1.0,estavel,1.0,19.0,0
+138,Diego Andrade,Administração,3.0,6.8,6.0,estavel,1.0,22.0,0
+139,Ursula Amaral,Engenharia Civil,1.0,6.7,7.0,intermediaria,1.0,23.0,0
+140,Carlos Pires,Administração,5.0,7.0,9.0,estavel,2.0,20.0,0
+141,Larissa Torres,Ciência da Computação,6.0,4.5,12.0,dificuldade,,24.0,1
+142,Iara Costa,Administração,3.0,4.3,25.0,dificuldade,1.0,23.0,1
+143,Isabella Souza,Engenharia Civil,4.0,6.0,2.0,estavel,2.0,21.0,0
+144,Talita Vargas,Direito,5.0,7.9,1.0,intermediaria,1.0,,0
+145,Luana Pereira,Ciência da Computação,2.0,6.3,2.0,intermediaria,0.0,21.0,0
+146,Marina Costa,Ciência da Computação,7.0,4.3,1.0,dificuldade,3.0,22.0,0
+147,Isabella Queiroz,Engenharia Civil,8.0,5.5,3.0,intermediaria,0.0,24.0,0
+148,Rodrigo Almeida,Direito,7.0,6.5,5.0,estavel,1.0,18.0,0
+149,Diego Cunha,Direito,6.0,6.5,1.0,intermediaria,1.0,,0
+150,Larissa Lima,Ciência da Computação,5.0,4.4,5.0,intermediaria,2.0,20.0,1
+151,Gabriela Duarte,Ciência da Computação,3.0,5.0,8.0,intermediaria,0.0,20.0,0
+152,Olivia Assis,Administração,4.0,6.4,2.0,estavel,1.0,25.0,0
+153,Rafael Duarte,Administração,4.0,6.4,7.0,estavel,1.0,,0
+154,Luana Amaral,Engenharia Civil,6.0,5.7,5.0,intermediaria,1.0,24.0,0
+155,Hugo Santos,Direito,1.0,6.9,1.0,intermediaria,1.0,27.0,0
+156,Sônia Mendes,Medicina,6.0,6.8,5.0,estavel,0.0,34.0,0
+157,Ulisses Cruz,Ciência da Computação,2.0,6.1,1.0,estavel,0.0,28.0,0
+158,Gabriela Costa,Direito,7.0,7.1,1.0,estavel,0.0,25.0,0
+159,Adriana Dias,Direito,4.0,8.1,0.0,intermediaria,2.0,25.0,0
+160,Priscila Andrade,Ciência da Computação,5.0,4.9,4.0,intermediaria,0.0,23.0,0
+161,Wanessa Cruz,Direito,4.0,5.3,22.0,intermediaria,2.0,23.0,1
+162,Fernanda Nunes,Direito,1.0,7.4,4.0,estavel,2.0,27.0,0
+163,Carla Martins,Direito,3.0,6.1,0.0,dificuldade,0.0,21.0,0
+164,Nathan Carvalho,Ciência da Computação,5.0,4.3,38.0,intermediaria,2.0,19.0,1
+165,Bruno Moreira,Ciência da Computação,5.0,3.8,21.0,intermediaria,3.0,27.0,1
+166,Gustavo Pinto,Ciência da Computação,8.0,6.9,5.0,intermediaria,0.0,26.0,0
+167,Samuel Ribeiro,Engenharia Civil,5.0,7.3,1.0,intermediaria,2.0,21.0,0
+168,Patricia Duarte,Direito,4.0,3.0,24.0,intermediaria,3.0,28.0,1
+169,Adriana Souza,Medicina,8.0,6.2,13.0,estavel,2.0,26.0,0
+170,Adriana Castro,Medicina,1.0,5.2,3.0,estavel,4.0,24.0,0
+171,Beatriz Gomes,Administração,7.0,,5.0,intermediaria,2.0,24.0,0
+172,Bernardo Matos,Medicina,7.0,6.0,5.0,intermediaria,3.0,20.0,0
+173,Lucas Melo,Ciência da Computação,7.0,6.4,4.0,intermediaria,1.0,18.0,0
+174,Isabela Campos,Ciência da Computação,4.0,5.3,0.0,intermediaria,2.0,19.0,0
+175,Adriana Lopes,Ciência da Computação,8.0,4.1,32.0,dificuldade,1.0,25.0,1
+176,Juliana Teixeira,Administração,7.0,4.4,32.0,dificuldade,0.0,27.0,1
+177,Samuel Gonçalves,Engenharia Civil,6.0,7.2,3.0,dificuldade,0.0,27.0,0
+178,Marina Moreira,Direito,7.0,4.2,23.0,intermediaria,3.0,18.0,1
+179,Diego Dias,Engenharia Civil,7.0,4.1,30.0,dificuldade,0.0,21.0,1
+180,Alexandre Neto,Engenharia Civil,5.0,6.4,,estavel,0.0,17.0,0
+181,Tiago Gonçalves,Engenharia Civil,8.0,7.8,10.0,estavel,1.0,21.0,0
+182,Joana Santos,Ciência da Computação,3.0,5.4,4.0,intermediaria,0.0,22.0,0
+183,José Correia,Ciência da Computação,6.0,6.2,5.0,estavel,2.0,24.0,0
+184,Leonardo Cardoso,Medicina,7.0,8.2,3.0,estavel,1.0,27.0,0
+185,Elias Brito,Engenharia Civil,4.0,,40.0,estavel,5.0,19.0,1
+186,Thiago Nascimento,Ciência da Computação,5.0,6.8,6.0,estavel,1.0,29.0,0
+187,Nathan Amaral,Medicina,4.0,5.7,1.0,intermediaria,3.0,34.0,0
+188,Fernanda Azevedo,Engenharia Civil,1.0,6.7,12.0,intermediaria,2.0,20.0,0
+189,Hana Matos,Administração,8.0,4.0,15.0,intermediaria,1.0,30.0,1
+190,Rodrigo Oliveira,Administração,5.0,7.0,12.0,estavel,0.0,21.0,0
+191,Guilherme Magalhães,Engenharia Civil,4.0,4.9,11.0,intermediaria,1.0,20.0,1
+192,Caio Alves,Administração,7.0,5.6,1.0,intermediaria,1.0,18.0,0
+193,Gustavo Xavier,Medicina,6.0,6.2,3.0,intermediaria,0.0,18.0,0
+194,Simone Nascimento,Direito,5.0,5.9,4.0,estavel,0.0,24.0,0
+195,Débora Leal,Medicina,8.0,5.6,11.0,intermediaria,2.0,,1
+196,Isabella Guimarães,Direito,6.0,5.9,1.0,intermediaria,0.0,19.0,0
+197,Renata Neto,Engenharia Civil,7.0,5.9,1.0,intermediaria,2.0,19.0,0
+198,Eloisa Monteiro,Medicina,3.0,5.1,10.0,intermediaria,1.0,25.0,0
+199,Valentina Rocha,Ciência da Computação,4.0,4.6,20.0,estavel,1.0,27.0,1
+200,Vera Alves,Administração,4.0,4.3,15.0,dificuldade,1.0,19.0,1
+201,Pedro Torres,Direito,5.0,8.0,3.0,intermediaria,0.0,23.0,0
+202,Bernardo Braga,Direito,8.0,5.9,0.0,intermediaria,0.0,22.0,0
+203,Marina Campos,Direito,7.0,2.8,17.0,dificuldade,0.0,22.0,1
+204,Adriana Lopes,Direito,6.0,2.6,,intermediaria,0.0,22.0,1
+205,Isabela Assis,Direito,6.0,5.8,9.0,intermediaria,0.0,21.0,0
+206,Renata Guimarães,Engenharia Civil,3.0,4.6,9.0,intermediaria,3.0,,1
+207,Camila Monteiro,Engenharia Civil,5.0,8.0,6.0,estavel,0.0,18.0,0
+208,Tiago Barbosa,Engenharia Civil,8.0,8.6,,dificuldade,0.0,22.0,0
+209,Felipe Pires,Administração,2.0,7.5,5.0,intermediaria,1.0,22.0,0
+210,Wagner Martins,Direito,1.0,7.4,4.0,intermediaria,1.0,21.0,0
+211,Débora Machado,Direito,8.0,6.5,0.0,estavel,0.0,18.0,0
+212,Vera Assis,Ciência da Computação,4.0,4.5,19.0,intermediaria,,26.0,1
+213,Luana Leite,Medicina,4.0,3.2,20.0,estavel,4.0,20.0,1
+214,Hana Neto,Administração,7.0,5.3,17.0,dificuldade,0.0,18.0,1
+215,Fernanda Lima,Direito,8.0,7.3,3.0,intermediaria,2.0,23.0,0
+216,Adriana Teixeira,Administração,4.0,6.8,0.0,dificuldade,2.0,31.0,0
+217,Ursula Lima,Medicina,5.0,8.0,5.0,intermediaria,0.0,27.0,0
+218,Natalia Carvalho,Engenharia Civil,3.0,6.3,2.0,intermediaria,2.0,27.0,0
+219,Vera Dias,Engenharia Civil,1.0,4.8,1.0,estavel,3.0,32.0,1
+220,Kevin Torres,Administração,3.0,3.2,28.0,estavel,2.0,28.0,1
+221,Carlos Silva,Direito,2.0,6.9,13.0,intermediaria,1.0,27.0,0
+222,Tatiana Andrade,Medicina,8.0,3.0,8.0,estavel,3.0,24.0,1
+223,Camila Pires,Medicina,4.0,3.7,3.0,dificuldade,0.0,25.0,1
+224,Kevin Pinto,Medicina,8.0,4.9,26.0,intermediaria,5.0,28.0,1
+225,Caio Araújo,Engenharia Civil,5.0,5.9,3.0,dificuldade,1.0,23.0,0
+226,Nathan Ferreira,Medicina,5.0,6.6,2.0,estavel,0.0,21.0,0
+227,Queila Melo,Engenharia Civil,8.0,3.5,12.0,intermediaria,3.0,20.0,1
+228,Kevin Vieira,Direito,7.0,8.2,0.0,intermediaria,0.0,22.0,0
+229,Vanessa Teixeira,Ciência da Computação,5.0,6.7,5.0,estavel,1.0,24.0,0
+230,Aline Correia,Direito,4.0,7.9,9.0,intermediaria,0.0,18.0,0
+231,Camila Pereira,Direito,7.0,3.1,8.0,dificuldade,6.0,26.0,1
+232,Marcelo Pinto,Engenharia Civil,1.0,6.9,1.0,estavel,0.0,,0
+233,Vera Cavalcanti,Ciência da Computação,8.0,7.3,3.0,estavel,0.0,28.0,0
+234,Juliana Siqueira,Administração,2.0,6.3,2.0,estavel,1.0,26.0,0
+235,Leonardo Batista,Direito,4.0,7.4,,estavel,0.0,18.0,0
+236,Joana Teixeira,Ciência da Computação,4.0,7.7,2.0,intermediaria,1.0,22.0,0
+237,Matheus Castro,Engenharia Civil,6.0,4.4,5.0,intermediaria,0.0,23.0,0
+238,Giovanna Duarte,Administração,6.0,,7.0,estavel,2.0,37.0,0
+239,Rodrigo Lopes,Medicina,8.0,6.3,2.0,estavel,1.0,25.0,0
+240,Priscila Leal,Ciência da Computação,4.0,,16.0,intermediaria,4.0,22.0,1
+241,Hana Brito,Medicina,5.0,4.8,26.0,dificuldade,4.0,21.0,1
+242,Nathan Monteiro,Medicina,1.0,6.5,,estavel,0.0,22.0,0
+243,Samuel Melo,Ciência da Computação,3.0,6.1,,estavel,1.0,23.0,0
+244,Leonardo Araújo,Engenharia Civil,3.0,5.9,1.0,intermediaria,0.0,21.0,0
+245,Mariana Freitas,Engenharia Civil,1.0,6.3,4.0,intermediaria,2.0,27.0,0
+246,Eloisa Coelho,Medicina,5.0,4.7,28.0,dificuldade,2.0,23.0,1
+247,Roberto Azevedo,Medicina,8.0,4.6,1.0,estavel,2.0,19.0,0
+248,Isabela Castro,Ciência da Computação,7.0,5.7,0.0,estavel,0.0,18.0,0
+249,Guilherme Melo,Ciência da Computação,5.0,2.2,40.0,dificuldade,0.0,25.0,1
+250,Fábio Silva,Medicina,4.0,4.2,2.0,intermediaria,3.0,22.0,1
+251,Flávia Cruz,Engenharia Civil,8.0,5.9,1.0,dificuldade,3.0,19.0,0
+252,Henrique Moreira,Engenharia Civil,8.0,3.5,12.0,intermediaria,3.0,24.0,1
+253,Olivia Freitas,Ciência da Computação,2.0,6.6,9.0,estavel,2.0,24.0,0
+254,Daniela Araújo,Ciência da Computação,5.0,7.4,2.0,estavel,0.0,21.0,0
+255,Sabrina Nunes,Medicina,5.0,7.3,8.0,intermediaria,0.0,18.0,0
+256,Carla Azevedo,Ciência da Computação,4.0,6.3,14.0,intermediaria,0.0,31.0,0
+257,Nicolas Campos,Ciência da Computação,8.0,6.0,4.0,estavel,0.0,23.0,0
+258,João Borges,Ciência da Computação,7.0,7.5,4.0,dificuldade,0.0,23.0,0
+259,Carla Assis,Ciência da Computação,8.0,5.7,14.0,intermediaria,1.0,20.0,1
+260,Bernardo Correia,Administração,7.0,3.5,13.0,intermediaria,0.0,25.0,0
+261,Yasmin Machado,Engenharia Civil,8.0,6.0,7.0,intermediaria,2.0,25.0,0
+262,Caio Almeida,Engenharia Civil,7.0,6.6,2.0,intermediaria,3.0,21.0,0
+263,Aline Fonseca,Administração,1.0,,0.0,dificuldade,0.0,22.0,0
+264,Tatiana Castro,Direito,7.0,4.9,2.0,estavel,0.0,27.0,0
+265,Tiago Torres,Direito,3.0,5.2,2.0,intermediaria,4.0,22.0,1
+266,Nicolas Vieira,Administração,4.0,4.6,35.0,intermediaria,0.0,21.0,1
+267,Matheus Nogueira,Medicina,8.0,3.3,20.0,intermediaria,0.0,34.0,1
+268,Marina Xavier,Engenharia Civil,5.0,3.3,13.0,dificuldade,1.0,22.0,1
+269,Paulo Cardoso,Administração,7.0,5.0,11.0,dificuldade,2.0,24.0,1
+270,Paulo Guimarães,Ciência da Computação,8.0,6.2,4.0,intermediaria,0.0,22.0,0
+271,Hugo Batista,Direito,5.0,2.7,27.0,intermediaria,3.0,18.0,1
+272,Vera Torres,Direito,8.0,4.5,20.0,intermediaria,1.0,27.0,1
+273,Ursula Cruz,Administração,5.0,5.6,3.0,estavel,0.0,26.0,0
+274,Danilo Lima,Administração,4.0,7.0,0.0,estavel,1.0,21.0,0
+275,Sabrina Machado,Ciência da Computação,7.0,5.9,,estavel,,18.0,0
+276,Marina Batista,Ciência da Computação,6.0,7.1,3.0,estavel,,24.0,0
+277,Diego Magalhães,Engenharia Civil,5.0,4.3,5.0,dificuldade,0.0,26.0,0
+278,Wagner Gomes,Direito,8.0,6.2,8.0,estavel,0.0,24.0,0
+279,Sônia Correia,Direito,3.0,6.1,3.0,intermediaria,0.0,19.0,0
+280,Bernardo Nogueira,Ciência da Computação,7.0,3.5,4.0,dificuldade,2.0,24.0,1
+281,Camila Fonseca,Administração,4.0,4.6,8.0,dificuldade,0.0,36.0,1
+282,Isabela Cruz,Administração,7.0,6.6,3.0,intermediaria,0.0,29.0,0
+283,Carlos Machado,Administração,6.0,7.0,1.0,estavel,0.0,19.0,0
+284,Ursula Andrade,Ciência da Computação,3.0,5.6,32.0,estavel,5.0,19.0,1
+285,Carla Alves,Medicina,4.0,6.4,3.0,intermediaria,1.0,19.0,0
+286,Nara Vieira,Ciência da Computação,2.0,5.0,3.0,intermediaria,0.0,18.0,0
+287,Marina Ribeiro,Medicina,3.0,5.7,3.0,intermediaria,1.0,23.0,0
+288,Samuel Barros,Direito,2.0,7.3,1.0,intermediaria,0.0,23.0,0
+289,Patricia Nunes,Ciência da Computação,7.0,6.7,1.0,intermediaria,,20.0,0
+290,Wagner Leite,Ciência da Computação,2.0,4.0,18.0,intermediaria,0.0,21.0,1
+291,Larissa Moura,Direito,5.0,5.8,16.0,dificuldade,2.0,22.0,1
+292,Sônia Costa,Administração,7.0,6.5,,estavel,0.0,28.0,0
+293,Leonardo Torres,Ciência da Computação,6.0,5.0,13.0,intermediaria,0.0,18.0,0
+294,Hugo Neto,Medicina,3.0,5.4,26.0,intermediaria,3.0,23.0,1
+295,Natalia Pereira,Medicina,7.0,6.5,3.0,intermediaria,1.0,29.0,0
+296,Joana Braga,Administração,3.0,5.0,40.0,intermediaria,0.0,26.0,1
+297,Priscila Cardoso,Direito,8.0,6.8,10.0,estavel,0.0,22.0,0
+298,Hugo Braga,Administração,6.0,7.2,5.0,intermediaria,1.0,22.0,0
+299,Tatiana Borges,Ciência da Computação,6.0,5.7,3.0,intermediaria,0.0,23.0,0
+300,Lucas Leite,Engenharia Civil,8.0,8.9,2.0,estavel,0.0,,0
+301,Karla Machado,Medicina,,6.9,3.0,intermediaria,1.0,34.0,0
+302,Danilo Borges,Administração,5.0,4.2,40.0,intermediaria,2.0,25.0,1
+303,Queila Barbosa,Engenharia Civil,8.0,7.4,2.0,intermediaria,0.0,17.0,0
+304,Paulo Azevedo,Ciência da Computação,7.0,3.2,7.0,dificuldade,2.0,19.0,1
+305,Guilherme Andrade,Ciência da Computação,7.0,2.7,8.0,intermediaria,1.0,21.0,1
+306,Camila Amaral,Engenharia Civil,6.0,5.2,4.0,intermediaria,1.0,20.0,0
+307,Caio Batista,Administração,1.0,4.6,8.0,estavel,0.0,22.0,1
+308,Igor Leal,Administração,4.0,4.9,19.0,dificuldade,2.0,34.0,1
+309,Matheus Machado,Medicina,7.0,6.2,5.0,estavel,0.0,21.0,0
+310,Henrique Leite,Direito,3.0,6.8,8.0,intermediaria,0.0,28.0,0
+311,Simone Carvalho,Administração,8.0,7.0,3.0,estavel,1.0,21.0,0
+312,Ximena Nunes,Engenharia Civil,5.0,7.9,2.0,intermediaria,1.0,30.0,0
+313,Felipe Carvalho,Direito,6.0,6.0,4.0,intermediaria,0.0,22.0,0
+314,Marcelo Fonseca,Administração,6.0,6.3,5.0,estavel,0.0,27.0,0
+315,Matheus Leal,Engenharia Civil,4.0,,1.0,estavel,0.0,22.0,0
+316,Simone Nascimento,Ciência da Computação,1.0,5.8,1.0,estavel,2.0,26.0,0
+317,Leonardo Vieira,Engenharia Civil,3.0,5.8,4.0,dificuldade,0.0,24.0,0
+318,Bruna Duarte,Medicina,1.0,4.8,23.0,intermediaria,4.0,25.0,1
+319,Nathan Andrade,Medicina,1.0,7.0,2.0,intermediaria,0.0,25.0,0
+320,Diego Leite,Medicina,4.0,5.2,0.0,intermediaria,1.0,21.0,0
+321,Renata Souza,Direito,4.0,7.4,7.0,estavel,,19.0,0
+322,Elias Correia,Administração,,7.7,12.0,intermediaria,0.0,23.0,0
+323,Beatriz Nascimento,Medicina,6.0,6.3,21.0,dificuldade,0.0,24.0,1
+324,Eloisa Gonçalves,Medicina,3.0,4.1,22.0,estavel,2.0,20.0,1
+325,Leonardo Fonseca,Direito,6.0,5.8,,intermediaria,2.0,21.0,1
+326,Guilherme Teixeira,Administração,1.0,5.7,1.0,estavel,0.0,25.0,0
+327,Alexandre Barbosa,Medicina,7.0,6.4,4.0,dificuldade,0.0,25.0,0
+328,Sônia Braga,Direito,5.0,4.2,5.0,intermediaria,6.0,22.0,1
+329,Lucas Torres,Medicina,8.0,4.5,3.0,intermediaria,0.0,27.0,0
+330,Karla Silva,Ciência da Computação,6.0,5.3,28.0,dificuldade,2.0,26.0,1
+331,Luana Teixeira,Ciência da Computação,4.0,4.8,40.0,dificuldade,0.0,21.0,1
+332,Gustavo Dias,Medicina,6.0,2.1,38.0,estavel,0.0,23.0,1
+333,Tiago Neto,Engenharia Civil,5.0,4.7,40.0,intermediaria,2.0,21.0,1
+334,Isabela Alves,Administração,2.0,5.9,0.0,dificuldade,1.0,21.0,0
+335,Danilo Nogueira,Administração,1.0,6.7,10.0,intermediaria,0.0,24.0,0
+336,Bruna Carvalho,Engenharia Civil,7.0,6.7,13.0,intermediaria,0.0,27.0,0
+337,Danilo Andrade,Administração,2.0,7.2,1.0,intermediaria,1.0,26.0,0
+338,Priscila Pereira,Ciência da Computação,2.0,3.2,2.0,dificuldade,0.0,20.0,1
+339,Guilherme Ribeiro,Medicina,5.0,8.0,8.0,intermediaria,0.0,26.0,0
+340,Nicolas Vargas,Engenharia Civil,6.0,6.1,12.0,dificuldade,3.0,22.0,1
+341,Matheus Pereira,Direito,4.0,6.9,0.0,estavel,1.0,23.0,0
+342,Carla Vieira,Direito,5.0,6.5,1.0,estavel,0.0,18.0,0
+343,Sônia Monteiro,Administração,3.0,5.0,2.0,dificuldade,4.0,22.0,1
+344,Juliana Xavier,Medicina,1.0,5.5,5.0,estavel,2.0,22.0,0
+345,Henrique Batista,Medicina,8.0,7.7,6.0,estavel,0.0,18.0,0
+346,Helena Mendes,Medicina,5.0,5.0,6.0,intermediaria,0.0,31.0,0
+347,Olivia Melo,Medicina,,6.3,3.0,estavel,0.0,30.0,0
+348,José Cardoso,Direito,1.0,5.5,16.0,dificuldade,3.0,34.0,1
+349,Leonardo Medeiros,Medicina,5.0,6.1,0.0,intermediaria,,23.0,0
+350,Rafael Pinto,Medicina,4.0,7.4,3.0,dificuldade,0.0,22.0,0
+351,Olivia Guimarães,Direito,4.0,5.5,4.0,estavel,0.0,22.0,0
+352,Helena Dias,Administração,1.0,6.1,1.0,intermediaria,2.0,,0
+353,Bernardo Vieira,Direito,7.0,7.7,4.0,dificuldade,0.0,21.0,0
+354,Wesley Ribeiro,Engenharia Civil,6.0,4.7,2.0,estavel,1.0,19.0,0
+355,Daniela Braga,Medicina,6.0,6.3,4.0,intermediaria,1.0,22.0,0
+356,Pedro Torres,Medicina,2.0,6.8,10.0,estavel,2.0,21.0,0
+357,Caio Moreira,Medicina,4.0,4.8,11.0,intermediaria,4.0,18.0,1
+358,Natalia Teixeira,Administração,4.0,8.2,8.0,estavel,0.0,27.0,0
+359,Pedro Almeida,Administração,2.0,7.4,2.0,intermediaria,1.0,25.0,0
+360,Igor Ferreira,Administração,7.0,5.3,1.0,intermediaria,0.0,26.0,0
+361,Pedro Leite,Ciência da Computação,6.0,5.6,0.0,intermediaria,0.0,20.0,0
+362,Thiago Queiroz,Ciência da Computação,1.0,6.4,26.0,intermediaria,3.0,27.0,1
+363,José Martins,Ciência da Computação,1.0,4.1,28.0,intermediaria,,31.0,1
+364,Iara Andrade,Medicina,4.0,6.8,8.0,intermediaria,0.0,36.0,0
+365,Bernardo Melo,Administração,5.0,6.9,9.0,intermediaria,0.0,18.0,0
+366,Vanessa Matos,Ciência da Computação,7.0,5.1,38.0,estavel,1.0,20.0,1
+367,Samuel Matos,Direito,2.0,6.4,6.0,dificuldade,0.0,18.0,0
+368,Natalia Cavalcanti,Direito,7.0,7.0,9.0,dificuldade,0.0,26.0,0
+369,Matheus Guimarães,Engenharia Civil,7.0,7.1,2.0,intermediaria,0.0,21.0,0
+370,Felipe Vargas,Medicina,5.0,5.6,1.0,intermediaria,0.0,20.0,0
+371,Simone Azevedo,Ciência da Computação,4.0,4.2,40.0,intermediaria,4.0,23.0,1
+372,Thiago Cardoso,Ciência da Computação,,4.5,33.0,intermediaria,3.0,26.0,1
+373,Carla Siqueira,Administração,6.0,7.2,8.0,intermediaria,0.0,20.0,0
+374,Talita Rocha,Ciência da Computação,6.0,7.0,5.0,estavel,0.0,19.0,0
+375,Gabriela Rocha,Ciência da Computação,6.0,5.4,2.0,intermediaria,3.0,21.0,0
+376,Igor Teixeira,Direito,6.0,5.7,4.0,intermediaria,1.0,24.0,0
+377,Aline Lima,Direito,7.0,4.1,21.0,estavel,0.0,26.0,1
+378,Wesley Siqueira,Ciência da Computação,2.0,4.6,6.0,estavel,0.0,,0
+379,Nara Alves,Medicina,1.0,6.4,4.0,intermediaria,0.0,24.0,0
+380,Carla Cruz,Administração,8.0,5.0,13.0,intermediaria,2.0,21.0,1
+381,Marcelo Ribeiro,Administração,4.0,5.8,1.0,estavel,,29.0,0
+382,Olivia Machado,Medicina,2.0,5.6,1.0,intermediaria,1.0,28.0,0
+383,Wanessa Monteiro,Administração,2.0,6.7,4.0,estavel,1.0,24.0,0
+384,Tiago Neto,Administração,1.0,3.7,4.0,intermediaria,5.0,26.0,1
+385,Ulisses Santos,Engenharia Civil,1.0,4.9,24.0,intermediaria,0.0,25.0,1
+386,Fernanda Souza,Medicina,7.0,4.8,40.0,dificuldade,3.0,29.0,1
+387,Diego Machado,Engenharia Civil,8.0,6.3,13.0,intermediaria,0.0,28.0,0
+388,Marina Barros,Medicina,1.0,4.8,10.0,estavel,2.0,21.0,0
+389,Queila Nunes,Medicina,6.0,5.2,27.0,intermediaria,1.0,29.0,1
+390,Giovanna Viana,Administração,7.0,5.1,40.0,intermediaria,3.0,21.0,1
+391,Danilo Martins,Engenharia Civil,8.0,2.6,36.0,intermediaria,,26.0,1
+392,Sabrina Siqueira,Administração,7.0,3.6,6.0,intermediaria,1.0,26.0,1
+393,Caio Santos,Direito,5.0,5.7,5.0,estavel,1.0,32.0,0
+394,Otávio Guimarães,Medicina,2.0,4.4,36.0,intermediaria,1.0,21.0,1
+395,Vera Castro,Ciência da Computação,6.0,6.1,7.0,estavel,2.0,29.0,0
+396,Bruno Lopes,Direito,4.0,4.3,40.0,intermediaria,3.0,29.0,1
+397,Carlos Alves,Engenharia Civil,4.0,6.5,3.0,intermediaria,0.0,22.0,0
+398,Karla Nunes,Direito,3.0,4.8,,dificuldade,2.0,34.0,1
+399,Ana Lemos,Engenharia Civil,2.0,6.0,1.0,dificuldade,1.0,20.0,0
+400,Danilo Siqueira,Engenharia Civil,1.0,3.9,13.0,intermediaria,0.0,23.0,1
+401,Danilo Nunes,Administração,4.0,7.5,16.0,estavel,1.0,22.0,0
+402,João Batista,Administração,8.0,7.1,5.0,estavel,0.0,19.0,0
+403,Sônia Mendes,Engenharia Civil,1.0,8.5,4.0,estavel,2.0,20.0,0
+404,Helena Viana,Administração,1.0,5.2,16.0,intermediaria,3.0,28.0,1
+405,Marcelo Freitas,Medicina,5.0,,12.0,intermediaria,5.0,24.0,1
+406,Tatiana Cavalcanti,Medicina,8.0,5.8,4.0,intermediaria,1.0,22.0,0
+407,Isabela Araújo,Medicina,4.0,5.8,5.0,intermediaria,0.0,25.0,0
+408,Larissa Dias,Engenharia Civil,7.0,7.5,,intermediaria,0.0,18.0,0
+409,Juliana Nascimento,Direito,4.0,5.4,6.0,estavel,0.0,25.0,0
+410,Matheus Lemos,Engenharia Civil,2.0,3.7,40.0,intermediaria,1.0,21.0,1
+411,Sônia Freitas,Medicina,7.0,6.8,4.0,intermediaria,1.0,20.0,0
+412,Fábio Gonçalves,Engenharia Civil,3.0,7.4,3.0,estavel,2.0,19.0,0
+413,Marina Moura,Ciência da Computação,4.0,,10.0,estavel,0.0,25.0,0
+414,Luana Nascimento,Engenharia Civil,8.0,6.9,3.0,estavel,2.0,18.0,0
+415,Wesley Assis,Ciência da Computação,8.0,7.2,1.0,intermediaria,1.0,18.0,0
+416,Gabriela Rezende,Administração,6.0,6.6,7.0,dificuldade,1.0,24.0,0
+417,Adriana Batista,Direito,5.0,7.0,4.0,estavel,0.0,19.0,0
+418,Adriana Pinto,Ciência da Computação,7.0,7.2,15.0,estavel,0.0,19.0,0
+419,Aline Nunes,Engenharia Civil,2.0,8.5,5.0,intermediaria,0.0,27.0,0
+420,Tatiana Almeida,Medicina,8.0,5.4,6.0,estavel,0.0,20.0,0
+421,Camila Santos,Engenharia Civil,7.0,6.2,15.0,intermediaria,0.0,21.0,0
+422,Bernardo Costa,Engenharia Civil,6.0,5.7,4.0,estavel,0.0,28.0,0
+423,Gustavo Leite,Ciência da Computação,,5.5,3.0,dificuldade,0.0,26.0,0
+424,Vera Duarte,Direito,7.0,6.0,6.0,intermediaria,0.0,27.0,0
+425,Simone Pereira,Ciência da Computação,5.0,3.4,26.0,intermediaria,3.0,28.0,1
+426,Aline Rodrigues,Medicina,2.0,5.6,6.0,intermediaria,0.0,23.0,0
+427,Alexandre Oliveira,Ciência da Computação,3.0,5.9,5.0,estavel,2.0,18.0,0
+428,Giovanna Cruz,Engenharia Civil,4.0,5.2,37.0,intermediaria,3.0,26.0,1
+429,Valentina Nunes,Ciência da Computação,1.0,7.6,5.0,dificuldade,1.0,18.0,0
+430,Yasmin Castro,Direito,4.0,6.5,5.0,intermediaria,3.0,32.0,0
+431,Guilherme Melo,Engenharia Civil,6.0,4.6,2.0,estavel,0.0,20.0,0
+432,Kevin Magalhães,Direito,2.0,6.2,2.0,dificuldade,0.0,26.0,0
+433,Ximena Medeiros,Direito,6.0,4.9,10.0,dificuldade,2.0,38.0,1
+434,Gabriela Rodrigues,Direito,5.0,7.2,1.0,intermediaria,2.0,26.0,0
+435,Bruno Alves,Administração,5.0,7.1,2.0,intermediaria,1.0,29.0,0
+436,Renata Rezende,Medicina,8.0,4.7,21.0,intermediaria,5.0,24.0,1
+437,Aline Lima,Ciência da Computação,3.0,6.5,1.0,intermediaria,0.0,21.0,0
+438,Otávio Melo,Administração,7.0,5.0,14.0,intermediaria,1.0,25.0,1
+439,Helena Santos,Engenharia Civil,7.0,7.0,6.0,intermediaria,2.0,35.0,0
+440,Daniela Xavier,Medicina,4.0,4.1,15.0,dificuldade,0.0,19.0,1
+441,Marcelo Oliveira,Administração,6.0,5.9,0.0,intermediaria,,28.0,0
+442,Valentina Barbosa,Ciência da Computação,7.0,4.1,40.0,intermediaria,3.0,24.0,1
+443,Luana Correia,Ciência da Computação,4.0,6.1,3.0,intermediaria,0.0,29.0,0
+444,Guilherme Vieira,Engenharia Civil,4.0,7.3,5.0,intermediaria,2.0,28.0,0
+445,Fernanda Rocha,Medicina,2.0,6.1,5.0,estavel,0.0,22.0,0
+446,Carlos Santos,Direito,1.0,5.6,1.0,intermediaria,0.0,32.0,0
+447,Simone Torres,Medicina,5.0,5.9,4.0,intermediaria,0.0,30.0,0
+448,Igor Barbosa,Ciência da Computação,7.0,6.2,5.0,estavel,0.0,19.0,0
+449,Joana Dias,Medicina,4.0,5.6,4.0,intermediaria,0.0,23.0,0
+450,Caio Duarte,Engenharia Civil,8.0,6.5,0.0,intermediaria,1.0,19.0,0
+451,Giovanna Leite,Medicina,2.0,4.6,27.0,dificuldade,2.0,20.0,1
+452,Otávio Araújo,Administração,1.0,6.6,6.0,estavel,3.0,26.0,0
+453,Larissa Monteiro,Ciência da Computação,4.0,7.1,6.0,estavel,0.0,27.0,0
+454,Priscila Mendes,Administração,3.0,6.0,4.0,estavel,4.0,25.0,0
+455,Wanessa Freitas,Engenharia Civil,6.0,5.1,40.0,intermediaria,1.0,26.0,1
+456,Mariana Amaral,Direito,4.0,7.4,8.0,intermediaria,1.0,31.0,0
+457,Patricia Torres,Ciência da Computação,2.0,8.3,2.0,estavel,0.0,19.0,0
+458,Wesley Gomes,Administração,7.0,5.5,13.0,dificuldade,2.0,25.0,1
+459,Tatiana Siqueira,Engenharia Civil,5.0,7.1,0.0,estavel,0.0,20.0,0
+460,Pedro Castro,Engenharia Civil,3.0,7.4,0.0,intermediaria,1.0,22.0,0
+461,José Lemos,Medicina,1.0,4.4,22.0,intermediaria,2.0,24.0,1
+462,Isabela Araújo,Medicina,3.0,4.0,20.0,intermediaria,1.0,24.0,1
+463,Guilherme Freitas,Medicina,7.0,2.8,38.0,estavel,2.0,25.0,1
+464,Valentina Costa,Ciência da Computação,8.0,8.3,4.0,estavel,0.0,23.0,0
+465,Tiago Castro,Engenharia Civil,5.0,5.2,40.0,dificuldade,2.0,19.0,1
+466,Hana Vieira,Administração,8.0,5.0,15.0,dificuldade,5.0,23.0,1
+467,Nara Ramos,Ciência da Computação,8.0,5.8,8.0,intermediaria,0.0,24.0,0
+468,Tatiana Carvalho,Direito,4.0,7.1,1.0,intermediaria,2.0,23.0,0
+469,Luana Pereira,Engenharia Civil,5.0,7.0,7.0,intermediaria,,17.0,0
+470,Bruno Magalhães,Engenharia Civil,3.0,4.1,4.0,intermediaria,2.0,34.0,0
+471,Fábio Braga,Direito,1.0,3.1,24.0,dificuldade,3.0,32.0,1
+472,Gustavo Machado,Direito,8.0,6.4,1.0,estavel,0.0,19.0,0
+473,Ursula Machado,Ciência da Computação,7.0,2.1,12.0,dificuldade,3.0,27.0,1
+474,Giovanna Cruz,Medicina,3.0,4.7,3.0,estavel,0.0,24.0,0
+475,Elena Cardoso,Administração,,5.8,21.0,dificuldade,3.0,26.0,1
+476,Ursula Dantas,Engenharia Civil,1.0,7.1,5.0,dificuldade,2.0,26.0,0
+477,Tiago Mendes,Administração,3.0,7.3,0.0,intermediaria,0.0,23.0,0
+478,Helena Moreira,Direito,2.0,5.7,3.0,dificuldade,2.0,23.0,0
+479,Tiago Rezende,Ciência da Computação,5.0,3.3,7.0,intermediaria,2.0,21.0,1
+480,Eduardo Brito,Administração,8.0,6.3,1.0,intermediaria,0.0,26.0,0
+481,Felipe Martins,Direito,3.0,3.5,12.0,estavel,5.0,20.0,1
+482,Talita Araújo,Administração,2.0,6.6,13.0,intermediaria,3.0,21.0,0
+483,Hugo Azevedo,Engenharia Civil,5.0,5.9,2.0,estavel,0.0,24.0,0
+484,Eloisa Rezende,Administração,8.0,7.1,1.0,estavel,0.0,,0
+485,Tiago Batista,Engenharia Civil,4.0,7.9,1.0,estavel,0.0,24.0,0
+486,Roberto Pereira,Direito,3.0,3.5,7.0,intermediaria,3.0,24.0,1
+487,Rodrigo Fonseca,Engenharia Civil,8.0,5.8,0.0,estavel,2.0,22.0,0
+488,Joana Matos,Medicina,7.0,4.5,12.0,intermediaria,2.0,30.0,1
+489,Elena Viana,Engenharia Civil,6.0,7.2,3.0,estavel,0.0,25.0,0
+490,Isabella Pinto,Direito,3.0,2.7,25.0,intermediaria,3.0,21.0,1
+491,Larissa Magalhães,Medicina,1.0,5.2,1.0,intermediaria,0.0,24.0,0
+492,Natalia Lopes,Medicina,7.0,7.7,10.0,estavel,2.0,22.0,0
+493,Victor Medeiros,Medicina,3.0,3.1,14.0,dificuldade,1.0,21.0,1
+494,Sônia Nogueira,Medicina,2.0,5.7,17.0,intermediaria,1.0,30.0,0
+495,Vera Souza,Direito,7.0,5.1,13.0,intermediaria,6.0,32.0,1
+496,Ulisses Araújo,Direito,3.0,7.9,,intermediaria,1.0,26.0,0
+497,Valentina Santos,Ciência da Computação,8.0,4.3,40.0,dificuldade,2.0,20.0,1
+498,Caio Barros,Direito,4.0,6.7,17.0,intermediaria,0.0,19.0,0
+499,Helena Barros,Direito,3.0,5.9,4.0,intermediaria,0.0,26.0,0
+500,Elias Nogueira,Ciência da Computação,5.0,7.2,5.0,intermediaria,2.0,21.0,0
+501,Flávia Lima,Administração,5.0,6.9,6.0,intermediaria,1.0,24.0,0
+502,Carla Leal,Medicina,2.0,4.4,4.0,estavel,0.0,20.0,0
+503,Eloisa Santos,Administração,8.0,7.6,5.0,intermediaria,,24.0,0
+504,Vanessa Souza,Medicina,1.0,5.7,19.0,dificuldade,2.0,23.0,1
+505,Beatriz Pires,Engenharia Civil,4.0,7.2,6.0,dificuldade,0.0,29.0,0
+506,Ximena Ferreira,Direito,1.0,3.2,10.0,dificuldade,,22.0,1
+507,Ana Guimarães,Engenharia Civil,7.0,,10.0,intermediaria,2.0,19.0,1
+508,Joana Magalhães,Ciência da Computação,7.0,8.9,1.0,intermediaria,3.0,18.0,0
+509,Hugo Costa,Ciência da Computação,6.0,7.6,0.0,estavel,0.0,,0
+510,Natalia Barbosa,Engenharia Civil,4.0,5.7,4.0,estavel,0.0,22.0,0
+511,Queila Viana,Ciência da Computação,7.0,4.3,20.0,intermediaria,5.0,28.0,1
+512,Rafael Leal,Ciência da Computação,8.0,7.5,3.0,intermediaria,1.0,18.0,0
+513,Ximena Rocha,Direito,3.0,4.7,1.0,estavel,2.0,19.0,0
+514,Talita Ramos,Medicina,6.0,5.7,9.0,intermediaria,1.0,21.0,0
+515,Camila Vargas,Engenharia Civil,4.0,7.1,9.0,intermediaria,3.0,22.0,0
+516,Gustavo Moura,Direito,4.0,6.7,4.0,estavel,0.0,23.0,0
+517,Giovanna Rodrigues,Engenharia Civil,6.0,5.0,3.0,estavel,1.0,23.0,0
+518,Ursula Xavier,Administração,2.0,5.5,7.0,intermediaria,0.0,23.0,0
+519,Wesley Pinto,Direito,1.0,7.9,,estavel,0.0,17.0,0
+520,Danilo Cunha,Administração,8.0,4.5,40.0,dificuldade,2.0,,1
+521,Nara Assis,Direito,6.0,7.1,2.0,estavel,1.0,30.0,0
+522,Yasmin Cardoso,Direito,6.0,5.0,12.0,dificuldade,2.0,21.0,1
+523,Renata Xavier,Engenharia Civil,6.0,2.3,5.0,intermediaria,2.0,26.0,1
+524,Elena Viana,Engenharia Civil,7.0,4.1,40.0,intermediaria,4.0,,1
+525,Simone Barros,Medicina,5.0,,4.0,dificuldade,2.0,24.0,0
+526,Fábio Neto,Ciência da Computação,7.0,7.6,5.0,dificuldade,1.0,26.0,0
+527,Isabela Barros,Ciência da Computação,4.0,6.0,,estavel,0.0,31.0,0
+528,Sônia Ferreira,Administração,7.0,4.8,25.0,dificuldade,0.0,21.0,1
+529,Renata Carvalho,Direito,3.0,7.0,2.0,estavel,,23.0,0
+530,Priscila Borges,Medicina,,5.9,3.0,intermediaria,0.0,21.0,0
+531,Sabrina Leite,Direito,4.0,6.6,2.0,intermediaria,1.0,24.0,0
+532,Joana Dias,Medicina,8.0,7.2,12.0,intermediaria,3.0,18.0,0
+533,Danilo Nunes,Administração,5.0,6.0,37.0,dificuldade,6.0,18.0,1
+534,Patricia Martins,Ciência da Computação,3.0,5.0,13.0,dificuldade,0.0,30.0,1
+535,Danilo Torres,Engenharia Civil,6.0,4.2,27.0,dificuldade,3.0,18.0,1
+536,Débora Pereira,Ciência da Computação,4.0,8.1,1.0,intermediaria,0.0,28.0,0
+537,Pedro Coelho,Administração,7.0,6.9,2.0,intermediaria,0.0,18.0,0
+538,Nara Cavalcanti,Engenharia Civil,,6.4,11.0,estavel,0.0,26.0,0
+539,Eduardo Santos,Ciência da Computação,4.0,5.4,5.0,dificuldade,0.0,21.0,0
+540,Eduardo Gomes,Administração,2.0,4.5,2.0,intermediaria,0.0,23.0,0
+541,Hana Andrade,Medicina,5.0,6.3,6.0,intermediaria,1.0,24.0,0
+542,Valentina Leal,Engenharia Civil,4.0,8.9,13.0,intermediaria,2.0,25.0,0
+543,Hugo Siqueira,Medicina,3.0,4.5,16.0,dificuldade,2.0,22.0,1
+544,Camila Andrade,Medicina,2.0,7.5,5.0,intermediaria,,24.0,0
+545,Wanessa Silva,Medicina,5.0,6.4,4.0,estavel,1.0,18.0,0
+546,Nicolas Rocha,Administração,6.0,4.3,11.0,dificuldade,6.0,25.0,1
+547,Luana Cunha,Direito,8.0,5.7,10.0,intermediaria,3.0,21.0,1
+548,Vanessa Oliveira,Medicina,5.0,8.0,1.0,estavel,2.0,27.0,0
+549,Danilo Cardoso,Ciência da Computação,3.0,4.3,40.0,dificuldade,4.0,26.0,1
+550,Eduardo Leal,Medicina,8.0,4.4,18.0,dificuldade,2.0,21.0,1
+551,Hana Brito,Engenharia Civil,1.0,4.7,10.0,dificuldade,1.0,18.0,1
+552,Kevin Guimarães,Engenharia Civil,5.0,5.4,1.0,intermediaria,2.0,22.0,0
+553,Matheus Alves,Administração,7.0,5.8,4.0,intermediaria,1.0,26.0,0
+554,Marcelo Costa,Ciência da Computação,4.0,3.4,40.0,intermediaria,3.0,23.0,1
+555,Paulo Ramos,Administração,5.0,4.3,,dificuldade,2.0,31.0,1
+556,Natalia Viana,Medicina,2.0,6.9,1.0,intermediaria,0.0,19.0,0
+557,Bruna Gonçalves,Engenharia Civil,8.0,7.9,15.0,estavel,2.0,20.0,0
+558,Matheus Araújo,Medicina,4.0,5.4,40.0,intermediaria,2.0,20.0,1
+559,Mariana Leal,Medicina,4.0,5.8,12.0,estavel,0.0,23.0,0
+560,Renata Cavalcanti,Direito,2.0,6.4,9.0,estavel,0.0,23.0,0
+561,Victor Magalhães,Ciência da Computação,1.0,,10.0,intermediaria,2.0,29.0,0
+562,Vera Ramos,Engenharia Civil,3.0,6.5,3.0,intermediaria,1.0,25.0,0
+563,Henrique Ferreira,Administração,1.0,6.1,2.0,dificuldade,0.0,24.0,0
+564,Samuel Vargas,Direito,5.0,6.6,4.0,dificuldade,0.0,26.0,0
+565,Samuel Leal,Engenharia Civil,3.0,6.0,1.0,intermediaria,1.0,19.0,0
+566,Samuel Nascimento,Ciência da Computação,6.0,6.8,4.0,estavel,0.0,24.0,0
+567,Bruno Martins,Direito,5.0,6.0,7.0,estavel,0.0,27.0,0
+568,Matheus Araújo,Engenharia Civil,5.0,7.5,13.0,estavel,0.0,17.0,0
+569,Hana Ferreira,Medicina,6.0,4.6,,estavel,4.0,21.0,1
+570,Giovanna Lemos,Administração,5.0,6.5,1.0,intermediaria,0.0,17.0,0
+571,João Guimarães,Engenharia Civil,7.0,4.9,1.0,intermediaria,0.0,20.0,0
+572,Luana Gomes,Administração,6.0,4.7,0.0,dificuldade,1.0,21.0,0
+573,Nathan Cunha,Ciência da Computação,4.0,6.7,4.0,estavel,0.0,24.0,0
+574,Daniela Torres,Administração,8.0,6.5,2.0,estavel,1.0,25.0,0
+575,Camila Medeiros,Engenharia Civil,6.0,3.2,11.0,intermediaria,0.0,22.0,1
+576,Helena Batista,Engenharia Civil,4.0,5.3,2.0,estavel,0.0,23.0,0
+577,Mariana Ribeiro,Medicina,7.0,5.3,6.0,intermediaria,0.0,23.0,0
+578,Vanessa Borges,Direito,1.0,3.9,2.0,intermediaria,3.0,19.0,0
+579,Diego Silva,Engenharia Civil,8.0,7.7,4.0,estavel,0.0,27.0,0
+580,Karla Vieira,Administração,7.0,5.0,38.0,estavel,3.0,22.0,1
+581,Beatriz Viana,Ciência da Computação,8.0,5.4,2.0,intermediaria,0.0,22.0,0
+582,Caio Pereira,Engenharia Civil,4.0,7.0,1.0,intermediaria,0.0,22.0,0
+583,Patricia Barbosa,Ciência da Computação,6.0,7.5,1.0,estavel,0.0,20.0,0
+584,Bruno Souza,Administração,8.0,4.9,2.0,estavel,0.0,22.0,0
+585,Lucas Ferreira,Medicina,2.0,6.0,4.0,intermediaria,0.0,24.0,0
+586,Wanessa Cavalcanti,Engenharia Civil,6.0,6.0,9.0,intermediaria,0.0,19.0,0
+587,Elias Gomes,Administração,8.0,3.4,18.0,intermediaria,5.0,22.0,1
+588,Guilherme Batista,Ciência da Computação,2.0,4.7,18.0,intermediaria,6.0,25.0,1
+589,Wesley Fonseca,Direito,1.0,6.3,0.0,estavel,1.0,20.0,0
+590,Débora Silva,Ciência da Computação,7.0,5.1,9.0,dificuldade,1.0,20.0,1
+591,Wagner Batista,Administração,5.0,2.4,11.0,intermediaria,4.0,20.0,1
+592,Joana Torres,Direito,6.0,5.7,8.0,estavel,0.0,21.0,0
+593,Tiago Assis,Direito,4.0,5.7,6.0,estavel,,17.0,0
+594,Iara Medeiros,Direito,7.0,6.2,15.0,intermediaria,0.0,30.0,0
+595,Lucas Alves,Ciência da Computação,4.0,6.8,9.0,intermediaria,3.0,25.0,0
+596,Ana Magalhães,Engenharia Civil,8.0,4.0,14.0,dificuldade,0.0,26.0,1
+597,Hana Oliveira,Direito,6.0,5.4,9.0,estavel,0.0,21.0,0
+598,Kevin Lopes,Engenharia Civil,3.0,6.0,2.0,intermediaria,2.0,25.0,0
+599,Wesley Castro,Ciência da Computação,1.0,7.5,2.0,estavel,1.0,20.0,0
+600,Débora Viana,Administração,4.0,5.4,5.0,estavel,0.0,26.0,0
+601,Nathan Batista,Engenharia Civil,,8.0,12.0,intermediaria,0.0,19.0,0
+602,Nathan Magalhães,Administração,6.0,3.7,11.0,dificuldade,1.0,27.0,1
+603,Isabella Duarte,Administração,8.0,7.3,0.0,estavel,0.0,22.0,0
+604,Iara Siqueira,Ciência da Computação,,7.0,7.0,estavel,1.0,20.0,0
+605,Daniela Santos,Engenharia Civil,1.0,6.3,4.0,intermediaria,0.0,28.0,0
+606,Eloisa Correia,Ciência da Computação,5.0,6.6,9.0,estavel,0.0,22.0,0
+607,Renata Rocha,Ciência da Computação,8.0,5.2,5.0,estavel,0.0,21.0,0
+608,Débora Campos,Ciência da Computação,7.0,7.4,6.0,intermediaria,1.0,27.0,0
+609,Roberto Dantas,Engenharia Civil,5.0,6.8,5.0,estavel,0.0,24.0,0
+610,Carla Nogueira,Ciência da Computação,3.0,,1.0,estavel,1.0,18.0,0
+611,Carlos Leite,Ciência da Computação,6.0,5.5,14.0,dificuldade,2.0,22.0,1
+612,Wanessa Andrade,Engenharia Civil,2.0,5.4,4.0,intermediaria,0.0,27.0,0
+613,Lucas Braga,Direito,,6.3,2.0,intermediaria,0.0,21.0,0
+614,Joana Amaral,Engenharia Civil,1.0,6.8,6.0,intermediaria,0.0,23.0,0
+615,Ana Alves,Administração,,5.6,0.0,dificuldade,0.0,26.0,0
+616,Ana Rodrigues,Direito,7.0,6.0,1.0,estavel,1.0,23.0,0
+617,Adriana Almeida,Administração,6.0,10.0,7.0,dificuldade,0.0,22.0,0
+618,Bernardo Lemos,Administração,6.0,6.0,8.0,estavel,1.0,24.0,0
+619,Danilo Pires,Ciência da Computação,,,,intermediaria,2.0,20.0,1
+620,Gabriela Silva,Ciência da Computação,7.0,5.4,7.0,intermediaria,1.0,22.0,0
+621,João Matos,Direito,4.0,6.5,4.0,intermediaria,0.0,23.0,0
+622,Olivia Monteiro,Medicina,6.0,4.4,20.0,dificuldade,1.0,20.0,1
+623,Thiago Souza,Ciência da Computação,8.0,6.3,3.0,intermediaria,1.0,32.0,0
+624,Karla Almeida,Direito,1.0,6.1,10.0,estavel,4.0,24.0,1
+625,Mariana Lopes,Direito,3.0,7.6,2.0,intermediaria,0.0,29.0,0
+626,Bernardo Souza,Direito,2.0,5.0,8.0,estavel,0.0,20.0,0
+627,Adriana Braga,Ciência da Computação,7.0,3.2,25.0,intermediaria,3.0,21.0,1
+628,Marina Dias,Engenharia Civil,4.0,6.1,1.0,intermediaria,0.0,21.0,0
+629,Eduardo Silva,Engenharia Civil,1.0,6.9,13.0,intermediaria,0.0,24.0,0
+630,Sônia Castro,Direito,6.0,5.2,13.0,intermediaria,0.0,21.0,1
+631,Felipe Duarte,Medicina,,6.1,0.0,estavel,2.0,29.0,0
+632,Simone Dantas,Direito,4.0,5.5,40.0,dificuldade,2.0,24.0,1
+633,Marina Cavalcanti,Direito,1.0,5.0,18.0,intermediaria,3.0,22.0,1
+634,Lucas Amaral,Medicina,1.0,,1.0,estavel,0.0,30.0,0
+635,Gustavo Leite,Engenharia Civil,7.0,6.5,4.0,estavel,0.0,18.0,0
+636,Vera Moura,Engenharia Civil,8.0,4.5,21.0,dificuldade,3.0,18.0,1
+637,Victor Ribeiro,Direito,2.0,5.4,19.0,dificuldade,0.0,20.0,1
+638,Igor Rezende,Administração,2.0,7.6,4.0,estavel,0.0,19.0,0
+639,Henrique Silva,Direito,1.0,7.2,1.0,intermediaria,0.0,25.0,0
+640,Beatriz Pires,Medicina,7.0,3.0,24.0,estavel,3.0,22.0,1
+641,Luana Carvalho,Administração,8.0,4.6,2.0,intermediaria,0.0,23.0,0
+642,Sabrina Almeida,Ciência da Computação,3.0,4.6,31.0,intermediaria,5.0,22.0,1
+643,Kevin Barros,Ciência da Computação,2.0,6.7,6.0,estavel,0.0,23.0,0
+644,Vanessa Nunes,Medicina,4.0,6.4,5.0,intermediaria,2.0,29.0,0
+645,Olivia Brito,Administração,4.0,7.0,12.0,intermediaria,1.0,29.0,0
+646,Débora Ferreira,Direito,1.0,6.2,4.0,dificuldade,0.0,17.0,0
+647,Aline Lemos,Ciência da Computação,3.0,7.6,3.0,dificuldade,0.0,29.0,0
+648,Juliana Leal,Ciência da Computação,8.0,8.3,1.0,intermediaria,0.0,23.0,0
+649,Karla Andrade,Engenharia Civil,8.0,5.7,5.0,intermediaria,0.0,25.0,0
+650,Patricia Melo,Direito,6.0,4.6,9.0,intermediaria,1.0,23.0,1
+651,Tatiana Neto,Ciência da Computação,8.0,7.1,2.0,estavel,0.0,25.0,0
+652,Giovanna Borges,Administração,2.0,5.1,1.0,estavel,0.0,17.0,0
+653,Larissa Dias,Administração,2.0,3.9,11.0,intermediaria,3.0,21.0,1
+654,Guilherme Medeiros,Engenharia Civil,6.0,8.0,10.0,intermediaria,0.0,34.0,0
+655,Roberto Dias,Direito,1.0,7.0,2.0,estavel,0.0,19.0,0
+656,Vera Freitas,Medicina,7.0,3.9,5.0,intermediaria,2.0,18.0,1
+657,Isabela Correia,Direito,4.0,5.2,3.0,intermediaria,0.0,21.0,0
+658,Lucas Duarte,Medicina,4.0,6.5,5.0,intermediaria,0.0,28.0,0
+659,Tiago Cruz,Direito,1.0,8.6,3.0,estavel,2.0,24.0,0
+660,Bruna Duarte,Ciência da Computação,7.0,7.8,6.0,intermediaria,3.0,21.0,0
+661,Danilo Guimarães,Medicina,4.0,6.0,3.0,estavel,0.0,23.0,0
+662,Thiago Dias,Administração,5.0,5.9,3.0,intermediaria,1.0,29.0,0
+663,Beatriz Dantas,Direito,3.0,4.0,17.0,dificuldade,2.0,17.0,1
+664,Felipe Queiroz,Direito,4.0,5.6,1.0,dificuldade,,20.0,0
+665,Débora Magalhães,Direito,5.0,8.5,2.0,estavel,2.0,23.0,0
+666,Wagner Santos,Medicina,3.0,6.2,3.0,estavel,1.0,18.0,0
+667,Renata Leite,Medicina,1.0,3.7,17.0,dificuldade,0.0,23.0,1
+668,Ulisses Fonseca,Direito,3.0,6.0,8.0,intermediaria,0.0,27.0,0
+669,Leonardo Lopes,Medicina,6.0,7.4,2.0,intermediaria,0.0,21.0,0
+670,Larissa Duarte,Medicina,7.0,4.4,2.0,intermediaria,0.0,20.0,0
+671,Flávia Costa,Engenharia Civil,2.0,6.1,7.0,estavel,2.0,29.0,0
+672,Roberto Mendes,Administração,6.0,7.3,14.0,intermediaria,1.0,23.0,0
+673,Giovanna Cruz,Medicina,2.0,7.1,0.0,intermediaria,0.0,34.0,0
+674,Nara Nascimento,Administração,7.0,6.9,29.0,intermediaria,0.0,24.0,1
+675,Iara Lemos,Medicina,,4.0,5.0,dificuldade,1.0,28.0,1
+676,Marcelo Vieira,Ciência da Computação,2.0,6.9,8.0,intermediaria,0.0,30.0,0
+677,Larissa Silva,Medicina,3.0,9.1,13.0,intermediaria,1.0,20.0,0
+678,Paulo Brito,Medicina,1.0,6.0,3.0,intermediaria,0.0,21.0,0
+679,Talita Azevedo,Ciência da Computação,1.0,4.4,16.0,intermediaria,4.0,17.0,1
+680,Samuel Assis,Administração,4.0,5.3,15.0,dificuldade,2.0,21.0,1
+681,Rafael Pires,Engenharia Civil,7.0,,3.0,dificuldade,2.0,22.0,0
+682,Wagner Castro,Administração,5.0,6.7,7.0,dificuldade,1.0,26.0,0
+683,Juliana Nascimento,Direito,8.0,3.4,3.0,intermediaria,4.0,18.0,1
+684,Gabriela Dias,Medicina,8.0,6.3,2.0,estavel,4.0,27.0,0
+685,Bernardo Oliveira,Ciência da Computação,3.0,5.6,5.0,dificuldade,1.0,29.0,0
+686,Simone Correia,Medicina,2.0,,30.0,intermediaria,2.0,22.0,1
+687,Samuel Ferreira,Ciência da Computação,6.0,6.0,3.0,estavel,1.0,26.0,0
+688,Guilherme Pereira,Engenharia Civil,7.0,8.0,3.0,estavel,1.0,,0
+689,Thiago Rodrigues,Engenharia Civil,8.0,4.7,18.0,intermediaria,0.0,23.0,1
+690,Pedro Ferreira,Administração,3.0,4.3,18.0,dificuldade,0.0,21.0,1
+691,Felipe Rocha,Engenharia Civil,4.0,6.1,5.0,intermediaria,1.0,20.0,0
+692,Elena Castro,Engenharia Civil,8.0,6.9,1.0,intermediaria,1.0,21.0,0
+693,Joana Cardoso,Medicina,1.0,5.0,28.0,dificuldade,2.0,27.0,1
+694,Otávio Correia,Administração,7.0,,7.0,intermediaria,0.0,21.0,0
+695,Yasmin Vargas,Direito,5.0,5.6,2.0,estavel,0.0,24.0,0
+696,José Dantas,Medicina,7.0,5.8,13.0,dificuldade,0.0,18.0,0
+697,Queila Lopes,Medicina,5.0,6.9,5.0,estavel,1.0,26.0,0
+698,Rafael Coelho,Direito,8.0,6.2,2.0,intermediaria,0.0,26.0,0
+699,Eloisa Dantas,Engenharia Civil,5.0,6.3,7.0,dificuldade,2.0,27.0,1
+700,Ana Gomes,Medicina,2.0,6.9,13.0,estavel,2.0,21.0,0
+701,Pedro Alves,Ciência da Computação,3.0,5.0,28.0,intermediaria,2.0,18.0,1
+702,Natalia Freitas,Administração,6.0,8.1,2.0,estavel,2.0,26.0,0
+703,Fernanda Cardoso,Administração,7.0,3.4,16.0,dificuldade,4.0,22.0,1
+704,Marcelo Leal,Ciência da Computação,5.0,,2.0,intermediaria,0.0,18.0,0
+705,Roberto Monteiro,Ciência da Computação,3.0,7.4,0.0,dificuldade,2.0,25.0,0
+706,Tiago Leite,Direito,3.0,5.4,5.0,estavel,1.0,30.0,0
+707,Bernardo Leal,Engenharia Civil,8.0,6.7,2.0,intermediaria,0.0,18.0,0
+708,Ulisses Coelho,Ciência da Computação,2.0,6.4,14.0,estavel,0.0,25.0,0
+709,Talita Vieira,Medicina,3.0,4.9,18.0,estavel,1.0,24.0,0
+710,Queila Teixeira,Administração,4.0,6.2,,intermediaria,0.0,27.0,0
+711,Simone Nunes,Direito,6.0,4.8,2.0,intermediaria,0.0,26.0,0
+712,Aline Pinto,Engenharia Civil,3.0,5.4,15.0,intermediaria,,20.0,0
+713,Daniela Santos,Administração,5.0,7.3,4.0,intermediaria,0.0,20.0,0
+714,Marcelo Alves,Ciência da Computação,4.0,3.7,40.0,dificuldade,0.0,22.0,1
+715,Nicolas Santos,Engenharia Civil,2.0,6.2,2.0,intermediaria,0.0,19.0,0
+716,Queila Teixeira,Administração,5.0,4.5,14.0,intermediaria,1.0,25.0,1
+717,Valentina Barbosa,Engenharia Civil,4.0,3.4,22.0,intermediaria,2.0,19.0,1
+718,Diego Duarte,Ciência da Computação,2.0,7.7,5.0,estavel,1.0,22.0,0
+719,Queila Cardoso,Administração,6.0,6.7,1.0,dificuldade,0.0,20.0,0
+720,Vanessa Carvalho,Direito,8.0,4.5,25.0,intermediaria,3.0,30.0,1
+721,Adriana Matos,Administração,,8.0,3.0,intermediaria,2.0,23.0,0
+722,Sabrina Alves,Direito,5.0,3.9,10.0,intermediaria,5.0,22.0,1
+723,Aline Moreira,Engenharia Civil,5.0,4.0,8.0,dificuldade,6.0,19.0,1
+724,Yasmin Rodrigues,Direito,3.0,7.1,0.0,estavel,1.0,21.0,0
+725,Karla Almeida,Engenharia Civil,8.0,7.3,4.0,intermediaria,0.0,24.0,0
+726,Patricia Correia,Ciência da Computação,5.0,3.8,11.0,intermediaria,1.0,22.0,1
+727,Giovanna Leal,Direito,3.0,6.7,3.0,estavel,1.0,19.0,0
+728,Otávio Neto,Direito,1.0,6.7,0.0,intermediaria,0.0,25.0,0
+729,Nara Silva,Direito,6.0,7.2,30.0,estavel,0.0,30.0,0
+730,Gabriela Costa,Administração,5.0,6.7,3.0,estavel,,23.0,0
+731,Henrique Barbosa,Medicina,,6.2,9.0,estavel,0.0,22.0,0
+732,Giovanna Araújo,Direito,3.0,5.9,1.0,estavel,0.0,25.0,0
+733,Alexandre Siqueira,Direito,6.0,7.1,0.0,estavel,1.0,23.0,0
+734,Isabella Gonçalves,Medicina,7.0,6.2,1.0,intermediaria,1.0,21.0,0
+735,Bernardo Batista,Engenharia Civil,7.0,4.5,4.0,dificuldade,6.0,23.0,1
+736,Rafael Queiroz,Ciência da Computação,1.0,6.3,0.0,intermediaria,0.0,28.0,0
+737,Marina Coelho,Ciência da Computação,1.0,4.6,2.0,intermediaria,0.0,23.0,0
+738,Gabriela Nascimento,Direito,4.0,4.0,23.0,intermediaria,2.0,25.0,1
+739,Karla Lopes,Medicina,7.0,,24.0,estavel,2.0,24.0,0
+740,José Oliveira,Direito,5.0,4.8,40.0,dificuldade,3.0,19.0,1
+741,Felipe Oliveira,Direito,4.0,7.5,1.0,estavel,0.0,29.0,0
+742,Caio Coelho,Administração,6.0,,0.0,intermediaria,0.0,22.0,0
+743,Ursula Amaral,Medicina,5.0,3.5,11.0,intermediaria,4.0,20.0,1
+744,Gustavo Duarte,Ciência da Computação,5.0,7.4,3.0,dificuldade,1.0,25.0,0
+745,Patricia Barros,Medicina,4.0,5.7,15.0,dificuldade,2.0,28.0,1
+746,Mariana Melo,Administração,8.0,7.5,4.0,intermediaria,0.0,26.0,0
+747,Rodrigo Batista,Engenharia Civil,6.0,7.7,6.0,intermediaria,0.0,33.0,0
+748,Paulo Melo,Medicina,8.0,6.7,0.0,intermediaria,0.0,26.0,0
+749,Ximena Lima,Medicina,6.0,7.0,2.0,intermediaria,2.0,20.0,0
+750,Felipe Pereira,Medicina,8.0,7.7,2.0,estavel,0.0,22.0,0
+751,Guilherme Cardoso,Administração,5.0,3.4,9.0,intermediaria,4.0,19.0,1
+752,Queila Ribeiro,Direito,5.0,2.8,18.0,intermediaria,4.0,20.0,1
+753,Fábio Vieira,Direito,8.0,7.6,3.0,intermediaria,1.0,28.0,0
+754,Samuel Dias,Medicina,4.0,5.0,2.0,estavel,0.0,32.0,0
+755,Tatiana Alves,Administração,1.0,6.1,5.0,estavel,0.0,30.0,0
+756,Giovanna Cardoso,Administração,3.0,6.5,8.0,dificuldade,0.0,18.0,0
+757,Bruna Moura,Administração,3.0,2.9,26.0,intermediaria,0.0,22.0,1
+758,Carla Santos,Medicina,6.0,6.2,1.0,intermediaria,1.0,19.0,0
+759,Joana Magalhães,Direito,8.0,4.5,6.0,intermediaria,3.0,21.0,1
+760,Eloisa Ramos,Administração,5.0,3.4,40.0,dificuldade,2.0,27.0,1
+761,Fernanda Santos,Administração,6.0,6.9,0.0,estavel,0.0,18.0,0
+762,Rafael Santos,Medicina,1.0,6.0,9.0,dificuldade,0.0,26.0,0
+763,Fernanda Silva,Ciência da Computação,1.0,5.1,2.0,intermediaria,1.0,21.0,0
+764,Juliana Braga,Engenharia Civil,8.0,3.7,29.0,estavel,2.0,18.0,1
+765,Ursula Xavier,Medicina,2.0,4.3,2.0,estavel,1.0,18.0,0
+766,Natalia Siqueira,Medicina,2.0,3.6,19.0,dificuldade,4.0,21.0,1
+767,Natalia Medeiros,Engenharia Civil,1.0,5.6,4.0,intermediaria,0.0,26.0,0
+768,Bruna Cavalcanti,Ciência da Computação,7.0,5.5,0.0,estavel,0.0,25.0,0
+769,João Ribeiro,Direito,7.0,7.9,16.0,intermediaria,0.0,29.0,0
+770,Flávia Queiroz,Ciência da Computação,1.0,5.4,2.0,intermediaria,0.0,23.0,0
+771,Hana Souza,Ciência da Computação,4.0,6.9,0.0,estavel,0.0,20.0,0
+772,Queila Gomes,Medicina,3.0,4.2,6.0,intermediaria,3.0,34.0,1
+773,Valentina Leite,Ciência da Computação,2.0,4.1,30.0,intermediaria,2.0,24.0,1
+774,Yasmin Coelho,Administração,8.0,7.1,7.0,estavel,1.0,21.0,0
+775,Victor Moreira,Administração,7.0,5.0,6.0,estavel,0.0,23.0,0
+776,Kevin Cavalcanti,Ciência da Computação,7.0,5.7,2.0,intermediaria,0.0,24.0,0
+777,Olivia Andrade,Ciência da Computação,5.0,7.6,5.0,dificuldade,0.0,28.0,0
+778,Gabriela Oliveira,Administração,6.0,5.1,2.0,estavel,0.0,25.0,0
+779,Felipe Azevedo,Direito,1.0,4.7,16.0,dificuldade,3.0,19.0,1
+780,João Nascimento,Medicina,2.0,6.8,11.0,intermediaria,0.0,20.0,0
+781,Queila Andrade,Direito,6.0,7.5,8.0,estavel,1.0,21.0,0
+782,Patricia Freitas,Engenharia Civil,7.0,6.2,0.0,estavel,0.0,37.0,0
+783,Priscila Santos,Administração,5.0,4.3,40.0,intermediaria,2.0,32.0,1
+784,Luana Correia,Administração,5.0,5.6,40.0,dificuldade,2.0,20.0,1
+785,Valentina Mendes,Medicina,5.0,6.7,0.0,intermediaria,0.0,23.0,0
+786,Wanessa Souza,Administração,2.0,7.7,4.0,intermediaria,0.0,19.0,0
+787,Queila Amaral,Administração,4.0,4.4,12.0,dificuldade,0.0,21.0,1
+788,Queila Andrade,Medicina,5.0,6.8,4.0,intermediaria,1.0,21.0,0
+789,Patricia Alves,Engenharia Civil,4.0,5.6,6.0,intermediaria,1.0,20.0,0
+790,Adriana Moreira,Engenharia Civil,3.0,6.1,2.0,dificuldade,3.0,26.0,0
+791,Nathan Xavier,Ciência da Computação,3.0,3.7,40.0,intermediaria,3.0,30.0,1
+792,Wagner Souza,Medicina,4.0,5.1,5.0,intermediaria,0.0,24.0,0
+793,Vera Silva,Engenharia Civil,2.0,7.2,6.0,estavel,0.0,21.0,0
+794,Kevin Costa,Engenharia Civil,5.0,4.9,9.0,intermediaria,2.0,27.0,1
+795,Carla Nunes,Ciência da Computação,8.0,4.0,21.0,dificuldade,5.0,17.0,1
+796,Ximena Cunha,Medicina,6.0,7.2,4.0,estavel,0.0,21.0,0
+797,Marcelo Souza,Medicina,1.0,5.4,1.0,estavel,2.0,18.0,0
+798,Carlos Fonseca,Medicina,8.0,4.4,10.0,intermediaria,,37.0,1
+799,Henrique Mendes,Direito,6.0,6.3,0.0,estavel,1.0,19.0,0
+800,Tiago Almeida,Direito,1.0,5.9,0.0,intermediaria,1.0,29.0,0
+801,Samuel Rodrigues,Medicina,5.0,2.4,,intermediaria,3.0,30.0,1
+802,Fernanda Cavalcanti,Administração,5.0,3.8,30.0,dificuldade,1.0,34.0,1
+803,Luana Brito,Ciência da Computação,2.0,6.8,6.0,dificuldade,0.0,,0
+804,Lucas Torres,Direito,5.0,6.3,3.0,intermediaria,2.0,25.0,0
+805,Wesley Correia,Direito,2.0,3.6,38.0,intermediaria,3.0,32.0,1
+806,Bruno Melo,Medicina,3.0,3.3,17.0,intermediaria,5.0,25.0,1
+807,Priscila Matos,Administração,6.0,3.5,27.0,dificuldade,2.0,28.0,1
+808,Patricia Brito,Direito,8.0,6.5,0.0,estavel,0.0,19.0,0
+809,Diego Campos,Administração,4.0,5.4,6.0,estavel,2.0,29.0,0
+810,Ursula Rezende,Direito,5.0,6.1,1.0,estavel,0.0,23.0,0
+811,Adriana Rodrigues,Ciência da Computação,7.0,2.8,20.0,dificuldade,3.0,27.0,1
+812,Larissa Ribeiro,Administração,4.0,4.6,36.0,dificuldade,6.0,24.0,1
+813,Marina Pinto,Engenharia Civil,5.0,6.2,3.0,estavel,2.0,29.0,0
+814,Gabriela Lemos,Administração,7.0,2.2,23.0,intermediaria,4.0,22.0,1
+815,Juliana Lopes,Direito,1.0,7.4,8.0,estavel,2.0,21.0,0
+816,Alexandre Mendes,Administração,4.0,5.7,0.0,intermediaria,0.0,31.0,0
+817,Eloisa Brito,Ciência da Computação,7.0,5.6,4.0,intermediaria,1.0,,0
+818,Hana Vieira,Ciência da Computação,,4.8,40.0,dificuldade,2.0,17.0,1
+819,Camila Barbosa,Medicina,3.0,3.9,21.0,estavel,,27.0,0
+820,Patricia Queiroz,Engenharia Civil,6.0,5.9,9.0,estavel,4.0,26.0,0
+821,Danilo Azevedo,Direito,7.0,4.5,28.0,dificuldade,2.0,28.0,1
+822,Gustavo Santos,Medicina,1.0,4.8,12.0,estavel,3.0,26.0,1
+823,Patricia Lemos,Direito,5.0,8.2,7.0,intermediaria,0.0,24.0,0
+824,Alexandre Campos,Engenharia Civil,7.0,5.8,1.0,estavel,0.0,18.0,0
+825,Rafael Nunes,Direito,3.0,6.4,5.0,intermediaria,2.0,28.0,0
+826,Ximena Ramos,Medicina,4.0,6.0,0.0,intermediaria,0.0,31.0,0
+827,Elena Nogueira,Direito,6.0,5.2,1.0,intermediaria,0.0,19.0,0
+828,Hugo Azevedo,Direito,1.0,6.1,2.0,intermediaria,0.0,26.0,0
+829,Thiago Vargas,Medicina,2.0,5.7,8.0,intermediaria,1.0,19.0,0
+830,Karla Cunha,Direito,2.0,2.6,35.0,intermediaria,1.0,30.0,1
+831,Pedro Pinto,Ciência da Computação,1.0,5.8,6.0,intermediaria,0.0,20.0,0
+832,Bruno Queiroz,Medicina,5.0,3.5,4.0,intermediaria,2.0,24.0,1
+833,Marcelo Alves,Direito,1.0,2.8,6.0,dificuldade,5.0,20.0,1
+834,Adriana Viana,Direito,2.0,7.3,7.0,intermediaria,1.0,24.0,0
+835,Eloisa Souza,Direito,2.0,5.9,3.0,estavel,0.0,31.0,0
+836,Marcelo Silva,Medicina,4.0,6.0,4.0,estavel,0.0,19.0,0
+837,Hana Assis,Engenharia Civil,6.0,8.2,3.0,intermediaria,1.0,23.0,0
+838,Juliana Araújo,Ciência da Computação,2.0,6.5,,intermediaria,0.0,21.0,0
+839,Débora Matos,Engenharia Civil,1.0,7.3,3.0,intermediaria,2.0,23.0,0
+840,Guilherme Pereira,Medicina,4.0,3.3,28.0,dificuldade,0.0,28.0,1
+841,Sabrina Silva,Engenharia Civil,6.0,4.7,,dificuldade,3.0,27.0,1
+842,Danilo Azevedo,Engenharia Civil,5.0,3.4,12.0,intermediaria,1.0,27.0,1
+843,Patricia Siqueira,Ciência da Computação,6.0,5.7,4.0,intermediaria,0.0,,0
+844,Roberto Teixeira,Direito,5.0,2.8,40.0,dificuldade,2.0,23.0,1
+845,Sônia Lopes,Ciência da Computação,8.0,3.1,27.0,dificuldade,5.0,19.0,1
+846,José Leal,Administração,4.0,4.3,12.0,intermediaria,2.0,19.0,1
+847,Diego Santos,Engenharia Civil,4.0,6.0,1.0,intermediaria,0.0,24.0,0
+848,Alexandre Cunha,Ciência da Computação,5.0,6.8,2.0,intermediaria,1.0,27.0,0
+849,Nathan Duarte,Engenharia Civil,6.0,5.6,15.0,estavel,0.0,22.0,0
+850,Elena Cavalcanti,Engenharia Civil,2.0,5.2,1.0,dificuldade,0.0,27.0,0
+851,Bruna Barros,Administração,8.0,7.1,2.0,estavel,0.0,,0
+852,Beatriz Correia,Administração,7.0,3.5,12.0,estavel,0.0,37.0,1
+853,Samuel Vargas,Ciência da Computação,5.0,6.2,2.0,intermediaria,2.0,19.0,0
+854,Eduardo Oliveira,Direito,5.0,4.9,11.0,intermediaria,0.0,18.0,1
+855,Beatriz Silva,Engenharia Civil,2.0,6.7,8.0,intermediaria,0.0,27.0,0
+856,Gustavo Brito,Engenharia Civil,2.0,7.0,1.0,estavel,1.0,25.0,0
+857,Karla Matos,Medicina,6.0,7.0,5.0,estavel,0.0,23.0,0
+858,Samuel Leite,Direito,2.0,4.5,28.0,dificuldade,3.0,24.0,1
+859,Diego Magalhães,Medicina,6.0,7.5,,intermediaria,0.0,18.0,0
+860,Kevin Nunes,Engenharia Civil,8.0,5.2,22.0,intermediaria,1.0,27.0,1
+861,Pedro Monteiro,Direito,3.0,4.9,5.0,intermediaria,1.0,30.0,0
+862,Vanessa Borges,Ciência da Computação,2.0,6.2,1.0,estavel,0.0,23.0,0
+863,Juliana Alves,Medicina,4.0,8.3,6.0,estavel,2.0,19.0,0
+864,Giovanna Cruz,Engenharia Civil,4.0,6.6,1.0,intermediaria,0.0,29.0,0
+865,Diego Amaral,Administração,1.0,7.2,2.0,intermediaria,2.0,25.0,0
+866,Victor Andrade,Engenharia Civil,4.0,7.0,5.0,intermediaria,0.0,20.0,0
+867,Caio Almeida,Ciência da Computação,4.0,6.7,3.0,estavel,0.0,23.0,0
+868,Débora Guimarães,Medicina,3.0,5.2,20.0,dificuldade,1.0,23.0,1
+869,Tiago Monteiro,Medicina,3.0,5.1,18.0,intermediaria,1.0,21.0,1
+870,Otávio Medeiros,Ciência da Computação,3.0,7.0,11.0,estavel,0.0,18.0,0
+871,Camila Guimarães,Direito,4.0,4.8,21.0,dificuldade,4.0,33.0,1
+872,Luana Andrade,Ciência da Computação,4.0,6.5,11.0,estavel,3.0,24.0,0
+873,Rodrigo Braga,Engenharia Civil,2.0,7.0,1.0,estavel,0.0,30.0,0
+874,Priscila Freitas,Ciência da Computação,5.0,5.7,6.0,estavel,0.0,23.0,0
+875,Fábio Rocha,Administração,5.0,9.4,2.0,estavel,0.0,25.0,0
+876,Thiago Martins,Ciência da Computação,8.0,6.3,9.0,estavel,1.0,22.0,0
+877,Nara Santos,Administração,4.0,6.3,2.0,estavel,0.0,31.0,0
+878,Alexandre Souza,Direito,5.0,3.0,19.0,intermediaria,1.0,19.0,1
+879,Hugo Nascimento,Ciência da Computação,2.0,4.6,33.0,dificuldade,3.0,23.0,1
+880,Diego Medeiros,Administração,7.0,4.8,8.0,intermediaria,1.0,24.0,0
+881,Patricia Melo,Engenharia Civil,,,11.0,estavel,0.0,26.0,0
+882,Vanessa Azevedo,Engenharia Civil,3.0,3.3,15.0,dificuldade,1.0,30.0,1
+883,Ximena Nunes,Direito,2.0,5.5,33.0,dificuldade,3.0,24.0,1
+884,Vanessa Duarte,Medicina,1.0,4.4,29.0,dificuldade,3.0,17.0,1
+885,Gustavo Braga,Direito,1.0,5.6,1.0,intermediaria,0.0,26.0,0
+886,Tatiana Barbosa,Direito,7.0,7.1,7.0,intermediaria,0.0,28.0,0
+887,Vera Machado,Ciência da Computação,2.0,,2.0,intermediaria,0.0,19.0,0
+888,Juliana Moreira,Medicina,1.0,7.5,7.0,intermediaria,0.0,22.0,0
+889,Ximena Cardoso,Medicina,7.0,4.7,36.0,intermediaria,3.0,28.0,1
+890,Leonardo Castro,Direito,3.0,,2.0,intermediaria,1.0,26.0,0
+891,Rodrigo Melo,Engenharia Civil,8.0,7.0,1.0,intermediaria,0.0,19.0,0
+892,Elena Gonçalves,Ciência da Computação,1.0,3.6,37.0,intermediaria,0.0,19.0,1
+893,Bernardo Freitas,Administração,3.0,3.0,10.0,intermediaria,0.0,24.0,1
+894,Matheus Medeiros,Ciência da Computação,1.0,7.8,2.0,intermediaria,0.0,19.0,0
+895,Adriana Lima,Engenharia Civil,8.0,7.2,14.0,dificuldade,0.0,25.0,0
+896,Wanessa Pinto,Medicina,8.0,6.9,4.0,estavel,1.0,30.0,0
+897,Pedro Nogueira,Direito,4.0,6.8,1.0,intermediaria,2.0,26.0,0
+898,Yasmin Queiroz,Direito,3.0,3.6,33.0,intermediaria,0.0,22.0,1
+899,Helena Almeida,Direito,5.0,6.0,10.0,estavel,0.0,22.0,0
+900,Alexandre Borges,Direito,1.0,5.9,3.0,intermediaria,0.0,19.0,0
+901,Elena Castro,Engenharia Civil,3.0,7.3,7.0,intermediaria,0.0,19.0,0
+902,Valentina Cunha,Engenharia Civil,7.0,6.0,0.0,intermediaria,0.0,25.0,0
+903,Priscila Santos,Engenharia Civil,3.0,7.1,5.0,intermediaria,0.0,19.0,0
+904,Talita Leite,Medicina,6.0,3.7,16.0,intermediaria,2.0,26.0,1
+905,Hugo Matos,Ciência da Computação,2.0,,40.0,estavel,1.0,27.0,1
+906,Aline Guimarães,Direito,8.0,6.3,11.0,intermediaria,1.0,26.0,0
+907,Sabrina Matos,Engenharia Civil,8.0,4.2,11.0,intermediaria,2.0,25.0,1
+908,Sônia Barbosa,Direito,8.0,7.6,3.0,intermediaria,0.0,17.0,0
+909,Carla Pereira,Ciência da Computação,8.0,5.2,6.0,dificuldade,2.0,20.0,0
+910,Vanessa Nogueira,Administração,4.0,3.5,28.0,intermediaria,0.0,,1
+911,Guilherme Andrade,Direito,2.0,4.4,21.0,intermediaria,2.0,23.0,1
+912,Eduardo Machado,Administração,2.0,6.7,5.0,estavel,1.0,25.0,0
+913,Fernanda Ramos,Ciência da Computação,2.0,6.0,5.0,intermediaria,2.0,19.0,0
+914,Joana Teixeira,Ciência da Computação,1.0,4.5,0.0,intermediaria,0.0,19.0,0
+915,Olivia Cardoso,Medicina,4.0,8.9,2.0,intermediaria,0.0,20.0,0
+916,Isabela Borges,Direito,2.0,5.5,1.0,dificuldade,0.0,26.0,0
+917,Hana Siqueira,Engenharia Civil,3.0,5.0,11.0,estavel,1.0,21.0,0
+918,Flávia Torres,Administração,7.0,4.1,40.0,estavel,1.0,26.0,1
+919,Diego Pereira,Ciência da Computação,8.0,7.3,,estavel,0.0,24.0,0
+920,Renata Freitas,Medicina,4.0,4.3,7.0,intermediaria,3.0,22.0,1
+921,Larissa Queiroz,Ciência da Computação,5.0,6.3,28.0,intermediaria,0.0,19.0,1
+922,Fábio Viana,Medicina,5.0,7.1,2.0,intermediaria,0.0,20.0,0
+923,Natalia Barbosa,Administração,1.0,8.7,11.0,estavel,2.0,20.0,0
+924,Sabrina Dias,Engenharia Civil,6.0,7.3,2.0,intermediaria,1.0,18.0,0
+925,Rodrigo Silva,Ciência da Computação,2.0,5.9,3.0,estavel,0.0,25.0,0
+926,Bruna Siqueira,Engenharia Civil,5.0,3.6,19.0,intermediaria,2.0,27.0,1
+927,Henrique Andrade,Direito,8.0,6.1,2.0,intermediaria,2.0,24.0,0
+928,Olivia Lima,Engenharia Civil,5.0,5.6,3.0,dificuldade,1.0,22.0,0
+929,Valentina Rocha,Ciência da Computação,4.0,5.3,0.0,intermediaria,2.0,22.0,0
+930,Rodrigo Martins,Administração,3.0,6.0,5.0,dificuldade,1.0,19.0,0
+931,Aline Neto,Administração,7.0,6.8,3.0,intermediaria,2.0,30.0,0
+932,Priscila Braga,Direito,8.0,6.8,5.0,intermediaria,0.0,27.0,0
+933,João Vargas,Engenharia Civil,4.0,5.3,6.0,intermediaria,0.0,23.0,0
+934,Gabriela Lopes,Administração,2.0,8.1,9.0,intermediaria,0.0,21.0,0
+935,José Gomes,Ciência da Computação,8.0,2.0,38.0,dificuldade,1.0,25.0,1
+936,Matheus Fonseca,Engenharia Civil,5.0,5.7,4.0,intermediaria,1.0,31.0,0
+937,Sônia Martins,Engenharia Civil,2.0,5.9,12.0,intermediaria,2.0,19.0,0
+938,Lucas Gonçalves,Direito,5.0,6.8,11.0,dificuldade,0.0,23.0,0
+939,Queila Guimarães,Ciência da Computação,1.0,3.6,8.0,intermediaria,0.0,21.0,1
+940,Bernardo Andrade,Direito,5.0,7.0,4.0,dificuldade,2.0,21.0,0
+941,Juliana Andrade,Engenharia Civil,8.0,3.0,13.0,intermediaria,1.0,18.0,1
+942,Juliana Lemos,Medicina,4.0,6.7,3.0,intermediaria,0.0,22.0,0
+943,Pedro Batista,Ciência da Computação,3.0,7.1,7.0,estavel,3.0,23.0,0
+944,Simone Lopes,Administração,4.0,7.8,2.0,intermediaria,1.0,20.0,0
+945,Elias Siqueira,Direito,7.0,3.8,0.0,intermediaria,,20.0,0
+946,Simone Souza,Engenharia Civil,4.0,5.7,1.0,intermediaria,0.0,18.0,0
+947,Bernardo Cavalcanti,Administração,6.0,5.9,5.0,intermediaria,1.0,19.0,0
+948,Débora Moreira,Engenharia Civil,2.0,5.3,1.0,estavel,0.0,20.0,0
+949,Leonardo Lima,Engenharia Civil,7.0,6.0,2.0,estavel,0.0,20.0,0
+950,Ana Magalhães,Ciência da Computação,1.0,8.0,4.0,estavel,0.0,21.0,0
+951,Nara Mendes,Engenharia Civil,4.0,4.6,,intermediaria,0.0,23.0,0
+952,Caio Ramos,Administração,1.0,4.8,2.0,estavel,0.0,22.0,0
+953,Eloisa Nunes,Direito,6.0,4.0,23.0,dificuldade,3.0,28.0,1
+954,Carlos Ribeiro,Direito,4.0,7.2,0.0,estavel,1.0,26.0,0
+955,Paulo Martins,Administração,3.0,5.3,15.0,intermediaria,4.0,20.0,1
+956,Marina Teixeira,Engenharia Civil,6.0,6.7,6.0,intermediaria,0.0,22.0,0
+957,Hugo Freitas,Direito,8.0,7.4,1.0,dificuldade,0.0,23.0,0
+958,Natalia Duarte,Ciência da Computação,5.0,5.2,2.0,estavel,0.0,27.0,0
+959,Hana Andrade,Ciência da Computação,2.0,7.4,3.0,estavel,0.0,27.0,0
+960,Ximena Siqueira,Ciência da Computação,8.0,6.6,0.0,estavel,1.0,17.0,0
+961,Ulisses Rezende,Engenharia Civil,4.0,5.3,1.0,intermediaria,2.0,23.0,0
+962,Camila Lima,Engenharia Civil,6.0,6.2,3.0,intermediaria,3.0,23.0,0
+963,Rodrigo Lopes,Direito,7.0,,2.0,dificuldade,0.0,18.0,0
+964,Matheus Nogueira,Ciência da Computação,3.0,,1.0,dificuldade,0.0,26.0,0
+965,Victor Machado,Ciência da Computação,1.0,6.1,0.0,estavel,1.0,26.0,0
+966,Samuel Rocha,Administração,2.0,6.1,5.0,estavel,3.0,19.0,0
+967,Joana Torres,Medicina,5.0,8.5,13.0,dificuldade,0.0,25.0,0
+968,Lucas Moura,Ciência da Computação,8.0,7.0,4.0,intermediaria,0.0,21.0,0
+969,Carlos Batista,Engenharia Civil,8.0,4.3,40.0,intermediaria,1.0,25.0,1
+970,Roberto Rocha,Administração,2.0,7.7,1.0,estavel,1.0,27.0,0
+971,Luana Assis,Medicina,5.0,7.2,2.0,intermediaria,,18.0,0
+972,Larissa Barros,Engenharia Civil,1.0,3.4,14.0,dificuldade,5.0,25.0,1
+973,Marina Pires,Engenharia Civil,7.0,4.2,25.0,intermediaria,0.0,26.0,1
+974,Rafael Leite,Engenharia Civil,4.0,5.4,7.0,intermediaria,1.0,17.0,0
+975,Lucas Martins,Medicina,7.0,3.0,13.0,estavel,4.0,20.0,1
+976,Natalia Santos,Administração,5.0,3.9,36.0,intermediaria,3.0,33.0,1
+977,Fernanda Cunha,Direito,4.0,8.5,2.0,intermediaria,1.0,22.0,0
+978,Sabrina Moreira,Medicina,7.0,6.6,0.0,intermediaria,1.0,23.0,0
+979,Nara Vargas,Medicina,5.0,,6.0,estavel,1.0,29.0,0
+980,Wagner Leal,Medicina,8.0,6.3,1.0,intermediaria,2.0,30.0,0
+981,Igor Monteiro,Direito,4.0,6.0,40.0,dificuldade,1.0,22.0,1
+982,Bruno Araújo,Ciência da Computação,5.0,,5.0,intermediaria,2.0,18.0,0
+983,Talita Batista,Ciência da Computação,3.0,4.3,17.0,dificuldade,3.0,21.0,1
+984,Vanessa Rocha,Ciência da Computação,6.0,5.6,9.0,intermediaria,0.0,18.0,0
+985,Igor Mendes,Direito,3.0,7.4,1.0,intermediaria,1.0,21.0,0
+986,Simone Dantas,Ciência da Computação,1.0,6.9,0.0,intermediaria,0.0,,0
+987,Mariana Nogueira,Administração,5.0,7.5,5.0,estavel,3.0,19.0,0
+988,Ulisses Vargas,Engenharia Civil,2.0,6.4,2.0,estavel,0.0,31.0,0
+989,Nathan Vargas,Medicina,,4.9,12.0,estavel,1.0,20.0,1
+990,Nathan Freitas,Engenharia Civil,1.0,7.6,14.0,estavel,1.0,,0
+991,Gustavo Azevedo,Ciência da Computação,8.0,7.8,0.0,intermediaria,1.0,23.0,0
+992,Sônia Nascimento,Medicina,8.0,6.8,5.0,estavel,2.0,28.0,0
+993,Felipe Azevedo,Administração,7.0,5.3,1.0,estavel,0.0,17.0,0
+994,Felipe Araújo,Direito,7.0,3.4,28.0,intermediaria,3.0,28.0,1
+995,Valentina Assis,Direito,1.0,4.3,1.0,estavel,0.0,19.0,0
+996,Iara Rocha,Engenharia Civil,4.0,,1.0,intermediaria,0.0,18.0,0
+997,Aline Campos,Administração,7.0,5.7,0.0,estavel,0.0,30.0,0
+998,Débora Ramos,Direito,2.0,7.1,7.0,intermediaria,0.0,23.0,0
+999,Guilherme Ramos,Medicina,2.0,7.3,2.0,intermediaria,0.0,21.0,0
+1000,Karla Pinto,Medicina,,7.5,0.0,intermediaria,0.0,24.0,0
+1001,Nathan Neto,Engenharia Civil,8.0,6.8,8.0,intermediaria,0.0,21.0,0
+1002,Ulisses Rodrigues,Medicina,6.0,5.7,13.0,intermediaria,5.0,19.0,1
+1003,Carla Vieira,Engenharia Civil,3.0,7.4,2.0,intermediaria,1.0,18.0,0
+1004,Henrique Carvalho,Ciência da Computação,7.0,3.9,11.0,dificuldade,2.0,17.0,1
+1005,Wagner Carvalho,Medicina,8.0,6.6,1.0,intermediaria,0.0,24.0,0
+1006,Isabella Pereira,Administração,5.0,5.0,,intermediaria,2.0,17.0,1
+1007,Tatiana Santos,Medicina,7.0,5.9,10.0,intermediaria,0.0,29.0,0
+1008,Lucas Mendes,Medicina,5.0,7.0,,estavel,0.0,23.0,0
+1009,Eduardo Silva,Direito,1.0,6.3,5.0,estavel,3.0,28.0,0
+1010,Otávio Ferreira,Ciência da Computação,3.0,5.9,,intermediaria,0.0,27.0,0
+1011,Carlos Alves,Direito,3.0,6.3,6.0,estavel,0.0,26.0,0
+1012,Adriana Castro,Administração,8.0,6.7,1.0,estavel,1.0,19.0,0
+1013,Danilo Castro,Engenharia Civil,5.0,7.3,9.0,intermediaria,0.0,,0
+1014,Felipe Dias,Direito,2.0,5.2,8.0,intermediaria,0.0,34.0,0
+1015,Sônia Fonseca,Direito,1.0,5.2,9.0,intermediaria,1.0,23.0,0
+1016,Ximena Nogueira,Ciência da Computação,1.0,5.5,5.0,estavel,0.0,27.0,0
+1017,Priscila Dias,Administração,3.0,7.2,5.0,dificuldade,0.0,18.0,0
+1018,Kevin Neto,Medicina,8.0,6.7,20.0,intermediaria,2.0,21.0,0
+1019,Pedro Lopes,Engenharia Civil,5.0,6.3,4.0,estavel,2.0,23.0,0
+1020,Fernanda Melo,Direito,2.0,6.3,0.0,intermediaria,1.0,28.0,0
+1021,Samuel Pereira,Medicina,2.0,5.3,2.0,intermediaria,0.0,29.0,0
+1022,Leonardo Costa,Ciência da Computação,3.0,4.2,15.0,intermediaria,0.0,26.0,1
+1023,Kevin Rodrigues,Engenharia Civil,6.0,7.4,2.0,estavel,1.0,22.0,0
+1024,Olivia Torres,Medicina,8.0,6.1,3.0,estavel,1.0,35.0,0
+1025,Simone Oliveira,Engenharia Civil,2.0,6.4,1.0,estavel,0.0,23.0,0
+1026,Karla Dias,Administração,6.0,5.8,12.0,intermediaria,1.0,19.0,1
+1027,Natalia Dias,Direito,1.0,5.2,6.0,dificuldade,0.0,27.0,1
+1028,Olivia Rodrigues,Medicina,3.0,6.3,1.0,intermediaria,1.0,25.0,0
+1029,Isabela Mendes,Engenharia Civil,,7.2,17.0,intermediaria,1.0,22.0,0
+1030,Tiago Azevedo,Engenharia Civil,2.0,,1.0,dificuldade,1.0,25.0,0
+1031,Danilo Cruz,Engenharia Civil,3.0,6.4,3.0,intermediaria,0.0,29.0,0
+1032,Olivia Cavalcanti,Administração,4.0,3.9,24.0,intermediaria,4.0,19.0,1
+1033,Valentina Barros,Ciência da Computação,5.0,6.2,4.0,dificuldade,0.0,20.0,0
+1034,Wagner Matos,Administração,8.0,4.4,6.0,dificuldade,0.0,20.0,1
+1035,Felipe Lopes,Engenharia Civil,1.0,4.3,22.0,intermediaria,2.0,26.0,1
+1036,Roberto Pires,Medicina,1.0,5.7,12.0,estavel,0.0,27.0,0
+1037,Priscila Moura,Administração,,6.5,2.0,estavel,0.0,23.0,0
+1038,Olivia Pires,Administração,7.0,2.9,9.0,dificuldade,0.0,20.0,1
+1039,Gustavo Braga,Medicina,1.0,7.2,4.0,intermediaria,0.0,24.0,0
+1040,Luana Freitas,Direito,6.0,4.6,5.0,intermediaria,0.0,26.0,0
+1041,Talita Pereira,Medicina,6.0,3.7,40.0,intermediaria,1.0,27.0,1
+1042,Thiago Castro,Administração,5.0,5.3,14.0,intermediaria,2.0,17.0,0
+1043,Igor Magalhães,Administração,1.0,8.3,2.0,intermediaria,2.0,20.0,0
+1044,Iara Pereira,Medicina,6.0,8.0,7.0,intermediaria,0.0,28.0,0
+1045,Karla Pinto,Medicina,4.0,8.1,8.0,intermediaria,1.0,,0
+1046,Sônia Rocha,Medicina,7.0,4.1,15.0,intermediaria,3.0,26.0,1
+1047,Tiago Ribeiro,Administração,8.0,7.8,3.0,intermediaria,0.0,28.0,0
+1048,Luana Rezende,Medicina,2.0,5.4,2.0,estavel,0.0,23.0,0
+1049,Henrique Pereira,Direito,3.0,7.9,11.0,estavel,0.0,18.0,0
+1050,Giovanna Coelho,Administração,8.0,5.5,2.0,dificuldade,0.0,26.0,0
+1051,Nicolas Machado,Ciência da Computação,7.0,4.7,3.0,estavel,2.0,20.0,0
+1052,Diego Gomes,Administração,7.0,7.0,3.0,intermediaria,1.0,23.0,0
+1053,Natalia Mendes,Ciência da Computação,7.0,5.1,3.0,estavel,2.0,19.0,0
+1054,Tatiana Nogueira,Administração,6.0,6.8,1.0,estavel,0.0,23.0,0
+1055,Beatriz Vargas,Medicina,7.0,7.0,15.0,estavel,0.0,24.0,0
+1056,Ursula Ferreira,Administração,8.0,7.7,9.0,estavel,1.0,25.0,0
+1057,Eloisa Cavalcanti,Medicina,7.0,5.8,0.0,intermediaria,0.0,18.0,0
+1058,Talita Leite,Direito,6.0,5.4,6.0,estavel,2.0,22.0,0
+1059,Bernardo Araújo,Engenharia Civil,4.0,4.5,23.0,dificuldade,,21.0,1
+1060,Natalia Azevedo,Medicina,3.0,3.7,40.0,dificuldade,2.0,24.0,1
+1061,João Lopes,Medicina,2.0,7.2,2.0,estavel,0.0,21.0,0
+1062,Pedro Pires,Medicina,6.0,6.8,0.0,estavel,0.0,25.0,0
+1063,Gabriela Dias,Administração,6.0,3.8,19.0,intermediaria,3.0,19.0,1
+1064,Lucas Vargas,Ciência da Computação,4.0,8.0,3.0,estavel,0.0,23.0,0
+1065,Danilo Freitas,Engenharia Civil,5.0,3.6,40.0,estavel,1.0,30.0,1
+1066,Patricia Araújo,Direito,6.0,,2.0,estavel,1.0,27.0,0
+1067,Luana Matos,Engenharia Civil,4.0,7.9,1.0,intermediaria,0.0,20.0,0
+1068,Natalia Lima,Medicina,5.0,4.7,4.0,estavel,0.0,22.0,0
+1069,Roberto Lima,Direito,5.0,3.3,40.0,dificuldade,2.0,20.0,1
+1070,Nara Nogueira,Engenharia Civil,8.0,6.0,7.0,intermediaria,0.0,23.0,0
+1071,Henrique Braga,Administração,6.0,7.0,5.0,estavel,0.0,31.0,0
+1072,Gabriela Araújo,Medicina,7.0,4.9,15.0,intermediaria,3.0,23.0,1
+1073,Wagner Freitas,Ciência da Computação,8.0,3.3,14.0,dificuldade,2.0,19.0,1
+1074,Otávio Dias,Ciência da Computação,6.0,6.5,4.0,intermediaria,3.0,31.0,0
+1075,Sônia Torres,Medicina,7.0,6.7,5.0,intermediaria,0.0,26.0,0
+1076,Bernardo Matos,Medicina,7.0,,15.0,dificuldade,3.0,,1
+1077,Larissa Barros,Direito,8.0,6.1,0.0,estavel,0.0,23.0,0
+1078,Vera Souza,Medicina,8.0,7.2,2.0,intermediaria,0.0,22.0,0
+1079,Hana Oliveira,Ciência da Computação,3.0,4.3,10.0,intermediaria,2.0,19.0,1
+1080,Yasmin Machado,Engenharia Civil,4.0,5.4,3.0,estavel,0.0,25.0,0
+1081,Wanessa Medeiros,Medicina,7.0,4.5,23.0,intermediaria,2.0,24.0,1
+1082,Olivia Melo,Engenharia Civil,1.0,5.9,3.0,intermediaria,,18.0,0
+1083,Elena Castro,Direito,8.0,8.4,5.0,estavel,1.0,21.0,0
+1084,Renata Leite,Engenharia Civil,5.0,8.6,11.0,estavel,0.0,37.0,0
+1085,Hana Machado,Ciência da Computação,7.0,5.4,6.0,intermediaria,3.0,21.0,1
+1086,Tatiana Nogueira,Medicina,4.0,8.2,3.0,estavel,0.0,21.0,0
+1087,Elena Gonçalves,Medicina,1.0,6.7,,estavel,1.0,22.0,0
+1088,Alexandre Braga,Engenharia Civil,3.0,2.9,40.0,intermediaria,0.0,20.0,1
+1089,Ulisses Guimarães,Administração,1.0,4.3,13.0,dificuldade,1.0,19.0,1
+1090,Nathan Gonçalves,Direito,4.0,3.9,10.0,intermediaria,0.0,23.0,0
+1091,João Barros,Administração,3.0,5.9,5.0,intermediaria,0.0,26.0,0
+1092,Igor Ribeiro,Medicina,6.0,6.0,11.0,estavel,0.0,27.0,0
+1093,Marina Silva,Engenharia Civil,,6.0,5.0,intermediaria,,22.0,0
+1094,Yasmin Assis,Administração,1.0,5.2,0.0,dificuldade,2.0,20.0,0
+1095,Patricia Ribeiro,Direito,,5.8,2.0,intermediaria,0.0,,0
+1096,Sabrina Cruz,Engenharia Civil,1.0,4.3,17.0,dificuldade,2.0,22.0,1
+1097,João Ferreira,Direito,2.0,6.9,2.0,dificuldade,1.0,23.0,0
+1098,Igor Leite,Medicina,3.0,7.9,4.0,intermediaria,0.0,20.0,0
+1099,Wagner Gonçalves,Engenharia Civil,5.0,5.7,5.0,intermediaria,1.0,24.0,0
+1100,Nara Santos,Medicina,6.0,7.0,10.0,estavel,0.0,19.0,0
+1101,Natalia Cardoso,Engenharia Civil,2.0,6.2,1.0,intermediaria,0.0,25.0,0
+1102,Marcelo Carvalho,Engenharia Civil,8.0,7.1,1.0,intermediaria,0.0,26.0,0
+1103,Débora Oliveira,Ciência da Computação,4.0,6.8,3.0,intermediaria,1.0,23.0,0
+1104,Leonardo Melo,Administração,1.0,5.9,1.0,intermediaria,2.0,28.0,0
+1105,Débora Azevedo,Administração,5.0,2.9,12.0,dificuldade,,22.0,1
+1106,Camila Campos,Administração,6.0,3.9,40.0,dificuldade,,23.0,1
+1107,Fábio Fonseca,Medicina,1.0,4.7,24.0,dificuldade,1.0,24.0,1
+1108,Fernanda Dias,Administração,3.0,4.2,,estavel,2.0,25.0,1
+1109,Helena Barros,Administração,6.0,,6.0,intermediaria,1.0,22.0,0
+1110,Eduardo Amaral,Direito,3.0,6.5,2.0,dificuldade,0.0,24.0,0
+1111,Elias Cruz,Ciência da Computação,4.0,6.8,4.0,intermediaria,0.0,18.0,0
+1112,Sabrina Queiroz,Ciência da Computação,4.0,4.5,7.0,intermediaria,1.0,19.0,1
+1113,Marcelo Queiroz,Ciência da Computação,3.0,2.2,40.0,dificuldade,3.0,22.0,1
+1114,Ximena Ramos,Medicina,2.0,5.6,7.0,dificuldade,2.0,23.0,0
+1115,Olivia Souza,Ciência da Computação,,6.7,7.0,intermediaria,0.0,24.0,0
+1116,Ulisses Azevedo,Medicina,3.0,5.2,25.0,intermediaria,1.0,23.0,1
+1117,Juliana Moura,Ciência da Computação,6.0,7.2,4.0,intermediaria,0.0,20.0,0
+1118,Gustavo Amaral,Ciência da Computação,5.0,3.9,28.0,dificuldade,2.0,,1
+1119,Valentina Brito,Direito,5.0,4.9,0.0,intermediaria,0.0,24.0,0
+1120,Fábio Martins,Medicina,6.0,5.2,8.0,estavel,0.0,28.0,0
+1121,Eduardo Assis,Ciência da Computação,5.0,5.9,3.0,intermediaria,0.0,29.0,0
+1122,Fernanda Ramos,Direito,,2.5,10.0,dificuldade,4.0,25.0,1
+1123,Elena Pereira,Direito,,6.0,1.0,estavel,0.0,20.0,0
+1124,Ursula Fonseca,Engenharia Civil,1.0,6.5,1.0,dificuldade,0.0,23.0,0
+1125,Mariana Campos,Medicina,5.0,4.9,,dificuldade,1.0,22.0,1
+1126,Joana Ribeiro,Medicina,3.0,8.5,8.0,intermediaria,,23.0,0
+1127,Rodrigo Nogueira,Engenharia Civil,4.0,4.7,13.0,dificuldade,3.0,22.0,1
+1128,Samuel Xavier,Direito,6.0,5.7,3.0,estavel,0.0,24.0,0
+1129,Nara Dias,Direito,8.0,2.5,5.0,estavel,3.0,22.0,1
+1130,Wagner Rezende,Direito,2.0,6.5,5.0,dificuldade,0.0,28.0,0
+1131,José Azevedo,Engenharia Civil,5.0,7.2,2.0,intermediaria,3.0,18.0,0
+1132,Gustavo Leal,Medicina,8.0,6.8,4.0,intermediaria,2.0,28.0,0
+1133,João Amaral,Administração,2.0,7.3,1.0,intermediaria,0.0,28.0,0
+1134,Fábio Ramos,Administração,8.0,3.6,,dificuldade,5.0,31.0,1
+1135,Rodrigo Guimarães,Ciência da Computação,3.0,7.8,5.0,intermediaria,2.0,32.0,0
+1136,Diego Martins,Administração,4.0,3.4,40.0,estavel,3.0,,1
+1137,Larissa Gomes,Ciência da Computação,6.0,6.7,16.0,dificuldade,,23.0,0
+1138,Ulisses Queiroz,Direito,3.0,5.2,1.0,estavel,1.0,20.0,0
+1139,Kevin Souza,Ciência da Computação,3.0,6.3,2.0,estavel,2.0,17.0,0
+1140,Diego Queiroz,Administração,6.0,5.2,9.0,intermediaria,3.0,26.0,0
+1141,Ximena Coelho,Medicina,6.0,7.7,2.0,intermediaria,1.0,19.0,0
+1142,Matheus Moreira,Engenharia Civil,5.0,5.5,9.0,estavel,1.0,23.0,0
+1143,Igor Lopes,Administração,6.0,7.5,5.0,intermediaria,1.0,23.0,0
+1144,Rodrigo Santos,Direito,4.0,8.0,0.0,dificuldade,1.0,27.0,0
+1145,Bruna Correia,Administração,3.0,4.5,20.0,dificuldade,1.0,30.0,1
+1146,Otávio Siqueira,Ciência da Computação,4.0,7.0,1.0,intermediaria,0.0,22.0,0
+1147,Roberto Nunes,Administração,6.0,7.0,0.0,intermediaria,1.0,29.0,0
+1148,Bruno Andrade,Engenharia Civil,7.0,8.3,2.0,estavel,1.0,22.0,0
+1149,Natalia Batista,Administração,2.0,5.6,4.0,intermediaria,1.0,24.0,0
+1150,Flávia Vieira,Direito,8.0,7.3,3.0,dificuldade,2.0,21.0,0
+1151,Roberto Teixeira,Ciência da Computação,6.0,3.7,26.0,dificuldade,0.0,28.0,1
+1152,Alexandre Araújo,Medicina,1.0,5.9,5.0,dificuldade,0.0,19.0,0
+1153,Camila Rezende,Direito,7.0,4.4,7.0,intermediaria,5.0,19.0,1
+1154,Bernardo Castro,Ciência da Computação,1.0,6.9,7.0,estavel,0.0,22.0,0
+1155,Rodrigo Nascimento,Direito,6.0,6.8,6.0,intermediaria,0.0,23.0,0
+1156,Ximena Pinto,Engenharia Civil,2.0,6.5,5.0,intermediaria,0.0,21.0,0
+1157,Tatiana Rezende,Administração,7.0,7.0,10.0,estavel,0.0,,0
+1158,Eloisa Araújo,Administração,7.0,8.4,11.0,intermediaria,2.0,22.0,0
+1159,Otávio Campos,Direito,6.0,3.1,26.0,intermediaria,3.0,24.0,1
+1160,Gabriela Borges,Direito,7.0,5.7,6.0,estavel,0.0,26.0,0
+1161,Ursula Monteiro,Administração,3.0,5.0,10.0,estavel,0.0,26.0,0
+1162,Pedro Rezende,Engenharia Civil,8.0,2.2,20.0,dificuldade,0.0,26.0,1
+1163,Olivia Guimarães,Engenharia Civil,1.0,7.4,10.0,estavel,0.0,19.0,0
+1164,Matheus Lopes,Engenharia Civil,4.0,4.0,28.0,estavel,,22.0,1
+1165,Isabela Lima,Medicina,8.0,6.7,1.0,intermediaria,0.0,23.0,0
+1166,Alexandre Pires,Medicina,3.0,6.8,0.0,estavel,0.0,20.0,0
+1167,Nara Batista,Engenharia Civil,2.0,6.1,3.0,estavel,0.0,30.0,0
+1168,Iara Leal,Medicina,5.0,8.0,5.0,intermediaria,0.0,27.0,0
+1169,Aline Moreira,Administração,8.0,7.8,1.0,estavel,0.0,,0
+1170,Roberto Lemos,Engenharia Civil,1.0,3.2,27.0,intermediaria,3.0,24.0,1
+1171,João Medeiros,Direito,3.0,5.9,10.0,intermediaria,,23.0,0
+1172,Otávio Barbosa,Direito,5.0,6.6,2.0,intermediaria,2.0,19.0,0
+1173,Camila Alves,Administração,8.0,4.4,4.0,intermediaria,1.0,29.0,0
+1174,Olivia Castro,Administração,3.0,6.6,0.0,estavel,0.0,,0
+1175,Isabella Nunes,Administração,3.0,6.9,3.0,estavel,1.0,,0
+1176,Marina Freitas,Administração,5.0,2.7,21.0,dificuldade,4.0,27.0,1
+1177,Alexandre Pereira,Administração,8.0,8.5,8.0,intermediaria,1.0,21.0,0
+1178,Kevin Souza,Ciência da Computação,2.0,5.6,2.0,estavel,1.0,23.0,0
+1179,Isabella Rezende,Medicina,7.0,6.6,,intermediaria,2.0,22.0,0
+1180,Carla Borges,Medicina,5.0,6.5,5.0,intermediaria,0.0,29.0,0
+1181,Iara Nunes,Engenharia Civil,6.0,7.2,1.0,dificuldade,0.0,26.0,0
+1182,Carlos Pereira,Administração,5.0,2.8,40.0,intermediaria,1.0,22.0,1
+1183,Guilherme Coelho,Medicina,3.0,7.5,13.0,dificuldade,2.0,20.0,1
+1184,Natalia Azevedo,Ciência da Computação,2.0,6.0,3.0,estavel,2.0,29.0,0
+1185,Victor Teixeira,Engenharia Civil,7.0,9.5,1.0,intermediaria,,18.0,0
+1186,Sônia Vargas,Medicina,8.0,6.3,2.0,estavel,0.0,22.0,0
+1187,Joana Neto,Engenharia Civil,2.0,7.1,4.0,intermediaria,3.0,30.0,0
+1188,Tatiana Duarte,Medicina,8.0,3.5,21.0,intermediaria,4.0,26.0,1
+1189,Roberto Oliveira,Medicina,3.0,5.3,15.0,estavel,0.0,22.0,0
+1190,Patricia Lopes,Medicina,1.0,7.6,5.0,intermediaria,0.0,,0
+1191,Carla Lopes,Direito,4.0,4.1,6.0,dificuldade,2.0,23.0,1
+1192,Tatiana Lemos,Direito,2.0,6.0,1.0,estavel,0.0,24.0,0
+1193,Isabela Ramos,Administração,5.0,5.7,1.0,estavel,2.0,20.0,0
+1194,Bernardo Lemos,Ciência da Computação,5.0,7.1,1.0,estavel,0.0,23.0,0
+1195,Rodrigo Ferreira,Ciência da Computação,3.0,7.6,3.0,intermediaria,0.0,20.0,0
+1196,Mariana Dantas,Direito,4.0,6.3,1.0,intermediaria,2.0,26.0,0
+1197,Flávia Gomes,Direito,4.0,6.5,4.0,dificuldade,0.0,28.0,0
+1198,Igor Viana,Direito,8.0,9.3,3.0,estavel,1.0,24.0,0
+1199,Isabela Pereira,Engenharia Civil,2.0,4.9,6.0,estavel,1.0,22.0,0
+1200,Larissa Batista,Ciência da Computação,8.0,5.6,4.0,estavel,0.0,26.0,0
+1201,Igor Magalhães,Medicina,2.0,5.5,0.0,intermediaria,1.0,25.0,0
+1202,Roberto Almeida,Ciência da Computação,,5.4,1.0,intermediaria,2.0,18.0,0
+1203,Karla Araújo,Administração,6.0,4.2,19.0,intermediaria,2.0,23.0,1
+1204,Fábio Souza,Administração,2.0,5.5,8.0,intermediaria,0.0,23.0,0
+1205,Eduardo Silva,Ciência da Computação,4.0,4.4,1.0,intermediaria,1.0,24.0,0
+1206,Gabriela Silva,Medicina,6.0,5.2,3.0,dificuldade,0.0,24.0,0
+1207,Eloisa Almeida,Medicina,5.0,5.3,14.0,intermediaria,5.0,19.0,1
+1208,Hana Castro,Medicina,7.0,5.9,11.0,intermediaria,0.0,22.0,0
+1209,Roberto Cardoso,Administração,4.0,5.9,3.0,estavel,1.0,22.0,0
+1210,Kevin Rezende,Direito,3.0,5.1,40.0,dificuldade,3.0,20.0,1
+1211,Camila Martins,Direito,3.0,9.2,5.0,estavel,0.0,21.0,0
+1212,Ximena Lemos,Ciência da Computação,8.0,7.1,0.0,intermediaria,0.0,20.0,0
+1213,Queila Duarte,Direito,5.0,7.4,4.0,estavel,1.0,24.0,0
+1214,Eduardo Oliveira,Medicina,7.0,2.9,19.0,estavel,0.0,22.0,1
+1215,Yasmin Vieira,Direito,5.0,2.7,10.0,dificuldade,0.0,19.0,1
+1216,Camila Cavalcanti,Administração,1.0,3.5,4.0,dificuldade,2.0,22.0,1
+1217,Danilo Santos,Administração,8.0,5.8,5.0,dificuldade,3.0,22.0,1
+1218,Helena Martins,Administração,7.0,5.7,31.0,dificuldade,2.0,20.0,1
+1219,Bruno Nunes,Ciência da Computação,6.0,7.5,0.0,estavel,0.0,29.0,0
+1220,Olivia Brito,Medicina,4.0,4.9,24.0,dificuldade,3.0,23.0,1
+1221,Camila Campos,Medicina,8.0,6.2,6.0,intermediaria,1.0,26.0,0
+1222,Eduardo Cunha,Medicina,4.0,3.7,15.0,dificuldade,2.0,18.0,1
+1223,Guilherme Costa,Ciência da Computação,5.0,7.4,9.0,intermediaria,0.0,28.0,0
+1224,Eduardo Batista,Engenharia Civil,2.0,5.1,5.0,intermediaria,0.0,31.0,0
+1225,Marina Barbosa,Medicina,,5.6,12.0,intermediaria,1.0,26.0,0
+1226,Leonardo Xavier,Medicina,8.0,3.3,5.0,intermediaria,2.0,28.0,1
+1227,Renata Ferreira,Engenharia Civil,6.0,6.0,0.0,intermediaria,0.0,22.0,0
+1228,Luana Borges,Administração,5.0,6.5,6.0,intermediaria,0.0,,0
+1229,Priscila Martins,Direito,1.0,6.6,8.0,intermediaria,0.0,20.0,0
+1230,João Leite,Ciência da Computação,5.0,6.1,10.0,estavel,1.0,21.0,0
+1231,Kevin Cardoso,Medicina,7.0,5.0,18.0,dificuldade,4.0,37.0,1
+1232,Pedro Medeiros,Engenharia Civil,8.0,7.2,6.0,intermediaria,0.0,21.0,0
+1233,Patricia Guimarães,Ciência da Computação,8.0,2.8,8.0,intermediaria,5.0,30.0,1
+1234,Henrique Rocha,Engenharia Civil,5.0,3.8,28.0,dificuldade,3.0,21.0,1
+1235,Kevin Medeiros,Medicina,5.0,6.8,6.0,estavel,0.0,24.0,0
+1236,Gabriela Leite,Medicina,5.0,6.0,8.0,intermediaria,0.0,24.0,0
+1237,Larissa Torres,Ciência da Computação,2.0,6.4,5.0,intermediaria,,27.0,0
+1238,Guilherme Dantas,Direito,8.0,6.4,2.0,estavel,0.0,21.0,0
+1239,Gabriela Martins,Direito,8.0,4.9,8.0,estavel,4.0,26.0,0
+1240,Ursula Gomes,Engenharia Civil,,6.4,3.0,intermediaria,0.0,19.0,0
+1241,Leonardo Vargas,Direito,8.0,7.4,4.0,estavel,0.0,28.0,0
+1242,Gabriela Teixeira,Ciência da Computação,3.0,7.0,1.0,estavel,1.0,18.0,0
+1243,Vera Andrade,Ciência da Computação,5.0,5.9,,estavel,1.0,26.0,0
+1244,Samuel Azevedo,Administração,6.0,7.0,0.0,intermediaria,1.0,23.0,0
+1245,Wagner Siqueira,Ciência da Computação,4.0,6.2,3.0,intermediaria,0.0,22.0,0
+1246,Pedro Cruz,Medicina,4.0,5.7,2.0,intermediaria,0.0,22.0,0
+1247,Thiago Lemos,Direito,5.0,6.0,3.0,estavel,0.0,17.0,0
+1248,Isabela Oliveira,Ciência da Computação,3.0,5.7,2.0,estavel,0.0,20.0,0
+1249,Nathan Leal,Direito,7.0,4.4,18.0,dificuldade,1.0,28.0,1
+1250,Wanessa Torres,Engenharia Civil,1.0,5.2,9.0,estavel,,26.0,0
+1251,Nicolas Pires,Ciência da Computação,2.0,7.1,10.0,estavel,1.0,29.0,0
+1252,Bernardo Barros,Engenharia Civil,8.0,3.7,12.0,dificuldade,2.0,30.0,1
+1253,Daniela Azevedo,Medicina,8.0,5.0,12.0,intermediaria,3.0,20.0,1
+1254,Beatriz Cardoso,Ciência da Computação,4.0,7.1,9.0,intermediaria,1.0,21.0,0
+1255,Elena Martins,Direito,2.0,3.0,23.0,dificuldade,,24.0,1
+1256,Vanessa Cavalcanti,Direito,6.0,6.0,2.0,intermediaria,1.0,25.0,0
+1257,Wagner Guimarães,Direito,7.0,5.6,3.0,estavel,1.0,22.0,0
+1258,Juliana Melo,Direito,7.0,7.1,9.0,estavel,0.0,24.0,0
+1259,Fábio Lopes,Engenharia Civil,2.0,3.6,34.0,estavel,4.0,29.0,1
+1260,José Pinto,Direito,2.0,6.5,10.0,intermediaria,2.0,19.0,0
+1261,Caio Gomes,Medicina,5.0,4.9,35.0,intermediaria,1.0,21.0,1
+1262,Gabriela Coelho,Medicina,6.0,6.2,6.0,intermediaria,1.0,22.0,0
+1263,Gustavo Queiroz,Engenharia Civil,7.0,8.0,1.0,estavel,0.0,20.0,0
+1264,Larissa Pereira,Engenharia Civil,3.0,2.5,10.0,intermediaria,4.0,29.0,1
+1265,Gabriela Martins,Direito,7.0,3.0,40.0,estavel,0.0,21.0,1
+1266,Sônia Pinto,Direito,3.0,4.0,6.0,dificuldade,3.0,22.0,1
+1267,Nara Siqueira,Administração,5.0,7.3,1.0,intermediaria,0.0,22.0,0
+1268,Otávio Nascimento,Direito,3.0,6.5,,intermediaria,1.0,26.0,0
+1269,Igor Silva,Engenharia Civil,8.0,5.0,0.0,intermediaria,0.0,25.0,0
+1270,Iara Lopes,Ciência da Computação,3.0,6.8,2.0,estavel,0.0,21.0,0
+1271,Adriana Monteiro,Ciência da Computação,5.0,8.0,7.0,intermediaria,0.0,22.0,0
+1272,Camila Carvalho,Engenharia Civil,3.0,6.9,1.0,estavel,1.0,21.0,0
+1273,Nara Barbosa,Engenharia Civil,1.0,5.2,3.0,intermediaria,0.0,22.0,0
+1274,Sônia Amaral,Ciência da Computação,3.0,6.8,6.0,dificuldade,0.0,30.0,0
+1275,Hana Fonseca,Administração,8.0,6.7,6.0,estavel,1.0,19.0,0
+1276,Iara Moura,Ciência da Computação,8.0,7.2,4.0,estavel,0.0,,0
+1277,Iara Magalhães,Engenharia Civil,8.0,7.0,3.0,intermediaria,1.0,30.0,0
+1278,Thiago Neto,Administração,8.0,7.7,2.0,dificuldade,0.0,22.0,0
+1279,Helena Campos,Engenharia Civil,1.0,3.5,8.0,dificuldade,2.0,26.0,1
+1280,Tiago Cardoso,Ciência da Computação,8.0,,2.0,estavel,1.0,20.0,0
+1281,Guilherme Assis,Engenharia Civil,7.0,5.1,6.0,estavel,0.0,20.0,0
+1282,Renata Guimarães,Direito,,7.7,8.0,intermediaria,0.0,23.0,0
+1283,Elena Magalhães,Ciência da Computação,6.0,4.5,24.0,dificuldade,2.0,26.0,1
+1284,Sônia Gonçalves,Administração,7.0,6.8,10.0,intermediaria,0.0,26.0,0
+1285,Ana Martins,Direito,6.0,6.3,5.0,intermediaria,3.0,21.0,0
+1286,Rodrigo Lopes,Medicina,,4.9,1.0,estavel,2.0,24.0,0
+1287,Sônia Cruz,Administração,3.0,8.5,1.0,estavel,1.0,24.0,0
+1288,Igor Leal,Medicina,7.0,6.2,6.0,estavel,2.0,26.0,0
+1289,Marcelo Monteiro,Engenharia Civil,7.0,4.7,22.0,intermediaria,4.0,28.0,1
+1290,Hana Pires,Ciência da Computação,8.0,3.4,,intermediaria,5.0,,1
+1291,Helena Vieira,Medicina,8.0,6.2,,estavel,0.0,37.0,0
+1292,Olivia Melo,Direito,4.0,6.9,19.0,estavel,0.0,19.0,0
+1293,Mariana Brito,Ciência da Computação,2.0,8.2,11.0,intermediaria,1.0,25.0,0
+1294,Roberto Azevedo,Direito,1.0,7.4,2.0,intermediaria,0.0,23.0,0
+1295,Eduardo Dantas,Engenharia Civil,4.0,7.4,3.0,intermediaria,3.0,22.0,0
+1296,Bruno Silva,Direito,5.0,6.2,9.0,intermediaria,1.0,26.0,0
+1297,José Nogueira,Ciência da Computação,7.0,5.9,2.0,intermediaria,0.0,31.0,0
+1298,Wesley Barros,Ciência da Computação,1.0,4.6,35.0,dificuldade,4.0,22.0,1
+1299,Elena Vargas,Ciência da Computação,3.0,4.7,8.0,estavel,,24.0,1
+1300,Débora Cruz,Direito,7.0,5.4,34.0,intermediaria,1.0,20.0,1
+1301,Marina Barros,Engenharia Civil,8.0,6.3,5.0,estavel,0.0,25.0,0
+1302,Sônia Ferreira,Engenharia Civil,6.0,6.4,5.0,estavel,2.0,26.0,0
+1303,Alexandre Lima,Ciência da Computação,6.0,3.4,22.0,intermediaria,2.0,25.0,1
+1304,Felipe Leal,Administração,,5.5,19.0,estavel,1.0,23.0,0
+1305,Queila Ribeiro,Medicina,5.0,6.4,8.0,intermediaria,3.0,20.0,1
+1306,Pedro Pinto,Ciência da Computação,,7.0,3.0,estavel,2.0,19.0,0
+1307,Iara Rodrigues,Ciência da Computação,4.0,6.3,2.0,estavel,0.0,21.0,0
+1308,Patricia Melo,Direito,1.0,6.5,4.0,estavel,0.0,18.0,0
+1309,Helena Brito,Engenharia Civil,5.0,7.9,0.0,estavel,0.0,26.0,0
+1310,Alexandre Nogueira,Direito,8.0,3.4,25.0,dificuldade,1.0,20.0,1
+1311,Larissa Vieira,Ciência da Computação,6.0,6.8,6.0,dificuldade,0.0,26.0,0
+1312,Wesley Ferreira,Administração,6.0,5.4,7.0,intermediaria,0.0,18.0,0
+1313,Leonardo Pereira,Engenharia Civil,3.0,6.1,3.0,estavel,,24.0,0
+1314,Guilherme Vargas,Ciência da Computação,1.0,3.8,18.0,dificuldade,4.0,18.0,1
+1315,Isabella Santos,Medicina,6.0,5.3,12.0,intermediaria,,20.0,0
+1316,Diego Lemos,Direito,6.0,6.1,40.0,intermediaria,1.0,20.0,1
+1317,Bruna Araújo,Ciência da Computação,3.0,6.4,1.0,dificuldade,1.0,24.0,0
+1318,Kevin Silva,Engenharia Civil,7.0,7.2,2.0,intermediaria,2.0,20.0,0
+1319,Juliana Dantas,Medicina,,7.0,1.0,estavel,0.0,23.0,0
+1320,Ximena Rezende,Medicina,4.0,6.1,5.0,intermediaria,0.0,28.0,0
+1321,Patricia Ferreira,Administração,1.0,3.6,11.0,intermediaria,1.0,19.0,1
+1322,Caio Neto,Engenharia Civil,2.0,3.6,40.0,intermediaria,1.0,23.0,1
+1323,Roberto Moreira,Administração,6.0,3.1,40.0,intermediaria,3.0,24.0,1
+1324,Priscila Moura,Direito,6.0,3.5,30.0,intermediaria,2.0,25.0,1
+1325,Natalia Ferreira,Administração,4.0,6.5,24.0,dificuldade,0.0,27.0,1
+1326,Eloisa Gomes,Ciência da Computação,3.0,4.3,2.0,intermediaria,0.0,21.0,0
+1327,Giovanna Monteiro,Direito,2.0,6.5,1.0,estavel,0.0,28.0,0
+1328,Henrique Cavalcanti,Administração,2.0,6.1,5.0,intermediaria,2.0,27.0,0
+1329,Felipe Vieira,Administração,5.0,2.3,21.0,intermediaria,1.0,20.0,1
+1330,Ursula Viana,Engenharia Civil,1.0,4.6,4.0,intermediaria,0.0,24.0,0
+1331,Rafael Batista,Direito,2.0,5.7,17.0,intermediaria,2.0,21.0,1
+1332,Pedro Carvalho,Engenharia Civil,7.0,4.0,8.0,intermediaria,0.0,20.0,1
+1333,Queila Dantas,Ciência da Computação,7.0,7.4,13.0,estavel,0.0,21.0,0
+1334,Leonardo Souza,Ciência da Computação,5.0,4.0,13.0,intermediaria,0.0,20.0,1
+1335,Débora Melo,Engenharia Civil,4.0,3.7,17.0,intermediaria,1.0,24.0,1
+1336,Samuel Braga,Medicina,2.0,5.7,2.0,intermediaria,1.0,23.0,0
+1337,Aline Moura,Medicina,7.0,5.8,5.0,intermediaria,2.0,21.0,0
+1338,Wesley Andrade,Engenharia Civil,7.0,5.5,7.0,intermediaria,0.0,25.0,0
+1339,Lucas Cardoso,Direito,2.0,6.3,2.0,intermediaria,0.0,24.0,0
+1340,Ursula Cavalcanti,Ciência da Computação,1.0,4.2,13.0,intermediaria,0.0,21.0,1
+1341,Vanessa Amaral,Administração,4.0,6.0,4.0,intermediaria,0.0,20.0,0
+1342,Roberto Brito,Administração,2.0,7.2,4.0,estavel,1.0,28.0,0
+1343,Felipe Melo,Medicina,7.0,3.6,25.0,intermediaria,2.0,26.0,1
+1344,Sônia Nascimento,Engenharia Civil,7.0,4.7,21.0,dificuldade,3.0,23.0,1
+1345,Ulisses Alves,Ciência da Computação,2.0,,5.0,estavel,1.0,23.0,0
+1346,Natalia Amaral,Medicina,1.0,6.0,5.0,intermediaria,0.0,24.0,0
+1347,Danilo Nunes,Direito,8.0,3.9,21.0,intermediaria,3.0,,1
+1348,Guilherme Azevedo,Ciência da Computação,3.0,6.4,0.0,intermediaria,1.0,21.0,0
+1349,Iara Fonseca,Direito,7.0,7.1,6.0,intermediaria,1.0,27.0,0
+1350,Henrique Braga,Ciência da Computação,7.0,7.2,6.0,dificuldade,0.0,19.0,0
+1351,Carlos Cavalcanti,Administração,3.0,7.0,5.0,intermediaria,0.0,21.0,0
+1352,Gabriela Barros,Engenharia Civil,8.0,5.8,3.0,intermediaria,1.0,,0
+1353,Henrique Teixeira,Engenharia Civil,7.0,6.8,0.0,intermediaria,0.0,25.0,0
+1354,Sônia Carvalho,Medicina,1.0,5.5,0.0,estavel,0.0,18.0,0
+1355,Matheus Costa,Medicina,4.0,6.1,9.0,estavel,0.0,22.0,0
+1356,Igor Viana,Direito,6.0,5.1,7.0,intermediaria,1.0,34.0,0
+1357,Lucas Silva,Engenharia Civil,3.0,7.0,11.0,intermediaria,2.0,21.0,0
+1358,Nicolas Cruz,Engenharia Civil,7.0,5.5,3.0,intermediaria,0.0,25.0,0
+1359,Bruna Silva,Direito,3.0,7.7,0.0,estavel,1.0,21.0,0
+1360,Lucas Nascimento,Administração,1.0,7.3,1.0,estavel,0.0,27.0,0
+1361,Eduardo Moreira,Ciência da Computação,8.0,3.7,10.0,intermediaria,1.0,30.0,0
+1362,Bernardo Rodrigues,Engenharia Civil,4.0,6.9,10.0,intermediaria,1.0,32.0,0
+1363,Gabriela Queiroz,Ciência da Computação,3.0,7.8,12.0,estavel,1.0,22.0,0
+1364,Simone Brito,Engenharia Civil,6.0,8.2,3.0,intermediaria,0.0,22.0,0
+1365,Otávio Barros,Medicina,6.0,6.5,3.0,intermediaria,,18.0,0
+1366,Otávio Lemos,Direito,1.0,5.0,10.0,estavel,1.0,24.0,0
+1367,Marina Rocha,Administração,1.0,4.4,5.0,dificuldade,2.0,27.0,1
+1368,Isabela Cruz,Medicina,7.0,6.8,0.0,intermediaria,0.0,20.0,0
+1369,Aline Andrade,Medicina,3.0,7.4,8.0,intermediaria,0.0,34.0,0
+1370,Eloisa Carvalho,Administração,1.0,,27.0,estavel,1.0,19.0,1
+1371,Marcelo Rezende,Engenharia Civil,4.0,7.6,2.0,estavel,2.0,35.0,0
+1372,Renata Guimarães,Direito,2.0,5.6,3.0,intermediaria,0.0,21.0,0
+1373,Hana Barbosa,Medicina,3.0,6.6,7.0,dificuldade,3.0,20.0,0
+1374,Caio Medeiros,Ciência da Computação,2.0,5.1,27.0,intermediaria,4.0,29.0,1
+1375,João Assis,Direito,,3.4,7.0,intermediaria,1.0,19.0,1
+1376,Larissa Azevedo,Administração,6.0,4.7,16.0,intermediaria,0.0,19.0,1
+1377,Diego Vieira,Medicina,6.0,7.7,6.0,estavel,1.0,22.0,0
+1378,Gustavo Moura,Administração,6.0,6.2,3.0,estavel,0.0,19.0,0
+1379,Bernardo Azevedo,Medicina,7.0,7.0,9.0,intermediaria,0.0,21.0,0
+1380,Luana Oliveira,Ciência da Computação,1.0,5.0,19.0,dificuldade,5.0,20.0,1
+1381,Bernardo Fonseca,Direito,2.0,7.1,1.0,intermediaria,0.0,27.0,0
+1382,Nara Medeiros,Direito,8.0,6.6,6.0,estavel,0.0,21.0,0
+1383,Priscila Almeida,Administração,7.0,5.8,2.0,estavel,0.0,23.0,0
+1384,Simone Dantas,Direito,5.0,6.3,14.0,dificuldade,1.0,23.0,1
+1385,Débora Dantas,Direito,8.0,,5.0,intermediaria,2.0,30.0,0
+1386,Bruna Pires,Administração,1.0,6.7,3.0,intermediaria,1.0,24.0,0
+1387,Larissa Freitas,Administração,2.0,6.1,13.0,intermediaria,0.0,22.0,0
+1388,Elena Araújo,Direito,4.0,6.5,9.0,estavel,1.0,24.0,0
+1389,Isabella Andrade,Engenharia Civil,5.0,4.4,,dificuldade,3.0,,1
+1390,Victor Amaral,Engenharia Civil,1.0,7.8,6.0,estavel,0.0,21.0,0
+1391,Wanessa Siqueira,Engenharia Civil,7.0,7.5,3.0,estavel,0.0,18.0,0
+1392,Renata Lima,Ciência da Computação,5.0,4.2,33.0,dificuldade,2.0,20.0,1
+1393,Lucas Neto,Direito,6.0,3.0,18.0,intermediaria,0.0,31.0,1
+1394,Talita Coelho,Direito,7.0,6.0,0.0,intermediaria,1.0,22.0,0
+1395,Caio Martins,Ciência da Computação,7.0,6.3,8.0,intermediaria,2.0,27.0,0
+1396,Elena Duarte,Direito,4.0,5.8,40.0,intermediaria,2.0,26.0,1
+1397,Roberto Correia,Medicina,3.0,4.2,6.0,dificuldade,1.0,19.0,1
+1398,Isabela Mendes,Ciência da Computação,7.0,4.4,13.0,intermediaria,0.0,28.0,1
+1399,Hugo Souza,Direito,8.0,2.2,16.0,dificuldade,2.0,26.0,1
+1400,Pedro Amaral,Engenharia Civil,4.0,5.9,3.0,intermediaria,3.0,22.0,0
+1401,Danilo Guimarães,Administração,,3.6,33.0,intermediaria,0.0,19.0,1
+1402,Tatiana Duarte,Administração,4.0,,2.0,estavel,0.0,23.0,0
+1403,Renata Andrade,Administração,8.0,6.1,4.0,intermediaria,1.0,25.0,1
+1404,Joana Pereira,Medicina,1.0,6.3,8.0,intermediaria,0.0,22.0,0
+1405,Débora Vargas,Engenharia Civil,8.0,6.5,1.0,estavel,1.0,25.0,0
+1406,Marcelo Viana,Ciência da Computação,8.0,7.7,6.0,estavel,0.0,28.0,0
+1407,Ursula Leal,Engenharia Civil,5.0,5.8,4.0,intermediaria,0.0,24.0,0
+1408,Marina Pereira,Engenharia Civil,2.0,5.5,1.0,estavel,0.0,22.0,0
+1409,Kevin Dias,Medicina,7.0,5.6,10.0,estavel,1.0,18.0,0
+1410,Olivia Machado,Engenharia Civil,8.0,7.1,4.0,intermediaria,0.0,22.0,0
+1411,Valentina Gonçalves,Direito,4.0,8.1,0.0,intermediaria,0.0,22.0,0
+1412,Olivia Gonçalves,Engenharia Civil,4.0,6.4,2.0,intermediaria,2.0,25.0,0
+1413,Igor Nunes,Engenharia Civil,1.0,2.8,33.0,intermediaria,1.0,28.0,1
+1414,Fernanda Barbosa,Direito,6.0,8.2,9.0,intermediaria,1.0,19.0,0
+1415,João Araújo,Ciência da Computação,5.0,4.7,40.0,dificuldade,3.0,19.0,1
+1416,Nicolas Barbosa,Direito,1.0,7.8,3.0,intermediaria,0.0,20.0,0
+1417,Guilherme Braga,Direito,8.0,5.7,6.0,estavel,2.0,24.0,1
+1418,Kevin Freitas,Engenharia Civil,3.0,7.6,6.0,intermediaria,1.0,17.0,0
+1419,Gabriela Moura,Direito,8.0,,18.0,dificuldade,0.0,,0
+1420,Elena Magalhães,Engenharia Civil,8.0,6.5,10.0,intermediaria,0.0,17.0,0
+1421,Rodrigo Moreira,Administração,6.0,6.7,28.0,intermediaria,0.0,21.0,0
+1422,Nicolas Ramos,Medicina,1.0,5.6,7.0,dificuldade,0.0,24.0,0
+1423,Hana Leite,Engenharia Civil,1.0,6.2,1.0,intermediaria,1.0,23.0,0
+1424,Thiago Batista,Medicina,1.0,6.4,7.0,estavel,1.0,30.0,0
+1425,Fernanda Carvalho,Medicina,3.0,4.3,7.0,dificuldade,0.0,25.0,1
+1426,Natalia Costa,Medicina,5.0,6.0,16.0,intermediaria,2.0,22.0,1
+1427,Mariana Coelho,Direito,5.0,4.1,34.0,intermediaria,3.0,24.0,1
+1428,Camila Barbosa,Direito,1.0,6.3,13.0,estavel,0.0,23.0,0
+1429,Guilherme Dias,Engenharia Civil,4.0,5.1,3.0,intermediaria,1.0,25.0,0
+1430,Thiago Coelho,Ciência da Computação,6.0,7.0,3.0,intermediaria,2.0,19.0,0
+1431,Priscila Vieira,Engenharia Civil,2.0,2.0,40.0,dificuldade,1.0,20.0,1
+1432,Wagner Silva,Administração,8.0,7.3,3.0,intermediaria,2.0,21.0,0
+1433,Bruna Andrade,Engenharia Civil,1.0,6.3,5.0,intermediaria,0.0,18.0,0
+1434,Isabella Campos,Medicina,4.0,6.4,6.0,dificuldade,3.0,20.0,1
+1435,Fábio Dias,Medicina,8.0,7.9,8.0,intermediaria,0.0,27.0,0
+1436,Aline Assis,Engenharia Civil,8.0,3.9,16.0,dificuldade,3.0,21.0,1
+1437,Carla Lemos,Engenharia Civil,3.0,6.3,1.0,intermediaria,2.0,22.0,0
+1438,José Barbosa,Administração,5.0,7.7,0.0,intermediaria,0.0,23.0,0
+1439,Patricia Gomes,Medicina,5.0,4.7,,intermediaria,1.0,22.0,1
+1440,Kevin Matos,Direito,6.0,7.6,5.0,intermediaria,0.0,24.0,0
+1441,Isabella Gomes,Direito,5.0,4.5,3.0,intermediaria,2.0,22.0,1
+1442,Isabela Dantas,Direito,7.0,6.3,5.0,estavel,0.0,19.0,0
+1443,Nara Araújo,Medicina,8.0,5.8,4.0,intermediaria,2.0,30.0,0
+1444,Giovanna Gonçalves,Medicina,5.0,7.2,2.0,intermediaria,0.0,23.0,0
+1445,Guilherme Xavier,Medicina,5.0,7.3,0.0,intermediaria,0.0,21.0,0
+1446,Daniela Moreira,Administração,5.0,5.5,3.0,dificuldade,0.0,24.0,0
+1447,Paulo Rocha,Engenharia Civil,4.0,3.0,20.0,intermediaria,2.0,24.0,1
+1448,Thiago Barros,Administração,2.0,4.2,0.0,estavel,1.0,20.0,0
+1449,Giovanna Castro,Administração,2.0,6.0,2.0,estavel,1.0,20.0,0
+1450,Sabrina Teixeira,Engenharia Civil,2.0,5.1,0.0,estavel,2.0,22.0,0
+1451,Leonardo Alves,Ciência da Computação,5.0,6.2,3.0,intermediaria,2.0,20.0,0
+1452,Natalia Amaral,Administração,7.0,8.4,0.0,estavel,0.0,22.0,0
+1453,Aline Leite,Administração,7.0,6.1,21.0,intermediaria,0.0,24.0,0
+1454,Nara Ferreira,Medicina,8.0,6.4,3.0,estavel,4.0,17.0,0
+1455,Adriana Queiroz,Medicina,7.0,7.2,2.0,estavel,2.0,23.0,0
+1456,Isabella Machado,Ciência da Computação,6.0,6.0,3.0,intermediaria,0.0,18.0,0
+1457,Patricia Barbosa,Medicina,,4.6,19.0,dificuldade,3.0,27.0,1
+1458,Ana Lima,Medicina,5.0,3.4,17.0,intermediaria,1.0,22.0,1
+1459,Bruna Silva,Ciência da Computação,5.0,7.0,0.0,intermediaria,0.0,21.0,0
+1460,Valentina Barbosa,Medicina,4.0,6.8,1.0,intermediaria,0.0,32.0,0
+1461,Wagner Silva,Administração,7.0,4.5,40.0,intermediaria,3.0,22.0,1
+1462,Fernanda Rezende,Administração,7.0,6.2,7.0,estavel,0.0,20.0,0
+1463,Igor Xavier,Ciência da Computação,3.0,3.9,37.0,dificuldade,6.0,28.0,1
+1464,Elias Medeiros,Ciência da Computação,8.0,,4.0,estavel,1.0,22.0,0
+1465,Henrique Torres,Engenharia Civil,5.0,5.1,2.0,estavel,0.0,19.0,0
+1466,Larissa Medeiros,Direito,4.0,7.2,0.0,intermediaria,0.0,18.0,0
+1467,Eloisa Guimarães,Ciência da Computação,3.0,5.7,18.0,dificuldade,3.0,21.0,1
+1468,Otávio Gonçalves,Engenharia Civil,,5.5,15.0,intermediaria,0.0,,0
+1469,Luana Lemos,Administração,8.0,6.9,4.0,estavel,1.0,34.0,0
+1470,Camila Oliveira,Medicina,2.0,7.2,3.0,intermediaria,0.0,19.0,0
+1471,Carlos Teixeira,Direito,5.0,6.5,3.0,intermediaria,1.0,31.0,0
+1472,Carla Borges,Direito,2.0,4.6,22.0,intermediaria,4.0,25.0,1
+1473,Adriana Campos,Direito,4.0,5.6,5.0,intermediaria,3.0,20.0,0
+1474,Hugo Rezende,Engenharia Civil,5.0,5.3,21.0,intermediaria,3.0,24.0,1
+1475,Larissa Correia,Engenharia Civil,5.0,5.0,0.0,intermediaria,0.0,19.0,0
+1476,Elias Rocha,Administração,1.0,5.5,16.0,intermediaria,0.0,28.0,0
+1477,Henrique Rezende,Engenharia Civil,2.0,4.5,23.0,intermediaria,4.0,29.0,1
+1478,Eduardo Siqueira,Direito,7.0,6.4,4.0,estavel,0.0,,0
+1479,Rodrigo Pereira,Ciência da Computação,7.0,5.8,1.0,dificuldade,1.0,18.0,0
+1480,Valentina Almeida,Engenharia Civil,1.0,5.5,1.0,intermediaria,1.0,26.0,0
+1481,Talita Andrade,Direito,1.0,6.4,9.0,intermediaria,0.0,25.0,0
+1482,Carlos Souza,Direito,6.0,5.1,8.0,intermediaria,1.0,25.0,1
+1483,Otávio Dias,Engenharia Civil,4.0,6.7,2.0,estavel,3.0,23.0,0
+1484,Danilo Lima,Ciência da Computação,7.0,6.8,5.0,intermediaria,2.0,23.0,0
+1485,Ana Ferreira,Administração,8.0,4.9,8.0,estavel,1.0,26.0,1
+1486,Henrique Correia,Direito,1.0,8.2,3.0,intermediaria,0.0,19.0,0
+1487,Wanessa Dantas,Ciência da Computação,6.0,8.3,2.0,dificuldade,0.0,32.0,0
+1488,Pedro Neto,Direito,3.0,3.7,40.0,intermediaria,2.0,36.0,1
+1489,Gustavo Correia,Engenharia Civil,1.0,6.3,7.0,dificuldade,3.0,20.0,0
+1490,Helena Rezende,Medicina,2.0,8.0,3.0,intermediaria,0.0,31.0,0
+1491,Carla Cavalcanti,Ciência da Computação,3.0,3.9,20.0,dificuldade,3.0,22.0,1
+1492,Gabriela Rodrigues,Engenharia Civil,3.0,7.4,2.0,intermediaria,0.0,28.0,0
+1493,Karla Duarte,Medicina,4.0,6.1,10.0,estavel,1.0,22.0,0
+1494,Juliana Brito,Direito,4.0,5.9,0.0,intermediaria,0.0,31.0,0
+1495,Priscila Coelho,Direito,1.0,5.4,5.0,intermediaria,0.0,26.0,0
+1496,Lucas Ribeiro,Medicina,7.0,5.4,5.0,dificuldade,,28.0,0
+1497,Queila Cruz,Engenharia Civil,5.0,7.5,3.0,estavel,0.0,21.0,0
+1498,Rafael Ramos,Ciência da Computação,2.0,4.0,14.0,dificuldade,2.0,21.0,1
+1499,Beatriz Duarte,Engenharia Civil,2.0,4.9,2.0,dificuldade,0.0,22.0,0
+1500,Aline Ramos,Administração,,,2.0,intermediaria,1.0,20.0,0
