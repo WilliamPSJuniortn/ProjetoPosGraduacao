@@ -1,6 +1,6 @@
 """
 limpeza_dados.py
-Carrega data/alunos.csv, realiza limpeza e salva em data/alunos_limpo.csv.
+Carrega dataset data/alunos.csv, realiza limpeza e salva em data/alunos_limpo.csv.
 Etapas: tratamento de ausentes, remoção de duplicatas, tratamento de outliers (IQR).
 """
 
