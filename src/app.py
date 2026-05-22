@@ -12,7 +12,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score, confusion_matrix, roc_curve,
+    precision_recall_curve, average_precision_score,
 )
+from sklearn.calibration import calibration_curve
 
 # ---------------------------------------------------------------------------
 # Configuração da página
@@ -62,6 +64,7 @@ st.markdown("""
              font-weight:700; display:inline-block; margin:2px 0; }
     .badge-ok  { background:#d5e8d4; color:#27ae60; }
     .badge-s2  { background:#dae8fc; color:#2980b9; }
+    .badge-s3  { background:#e8daff; color:#8e44ad; }
     button[data-baseweb="tab"] { font-size: 0.95rem !important; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
@@ -69,11 +72,16 @@ st.markdown("""
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-BASE_DIR   = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DATA_LIMPO = os.path.join(BASE_DIR, "data", "alunos_limpo.csv")
-PREP_PATH  = os.path.join(BASE_DIR, "models", "preprocessador.pkl")
-LR_PATH    = os.path.join(BASE_DIR, "models", "modelo_regressao_logistica.pkl")
-RF_PATH    = os.path.join(BASE_DIR, "models", "modelo_random_forest.pkl")
+BASE_DIR    = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DATA_LIMPO  = os.path.join(BASE_DIR, "data", "alunos_limpo.csv")
+PREP_PATH   = os.path.join(BASE_DIR, "models", "preprocessador.pkl")
+LR_PATH     = os.path.join(BASE_DIR, "models", "modelo_regressao_logistica.pkl")
+RF_PATH     = os.path.join(BASE_DIR, "models", "modelo_random_forest.pkl")
+LR_OPT_PATH = os.path.join(BASE_DIR, "models", "modelo_lr_otimizado.pkl")
+RF_OPT_PATH = os.path.join(BASE_DIR, "models", "modelo_rf_otimizado.pkl")
+S3_RES_PATH = os.path.join(BASE_DIR, "data", "resultados_sprint3.csv")
+S3_CV_PATH  = os.path.join(BASE_DIR, "data", "cv_resultados_sprint3.csv")
+S3_LC_PATH  = os.path.join(BASE_DIR, "data", "learning_curves_sprint3.csv")
 
 COLUNAS_NUM = ["periodo", "cr", "faltas", "reprovacoes", "idade"]
 COLUNAS_CAT = ["curso", "situacao_financeira"]
@@ -93,6 +101,19 @@ def load_modelos():
     rf   = joblib.load(RF_PATH)
     return prep, lr, rf
 
+@st.cache_resource
+def load_modelos_s3():
+    if os.path.exists(LR_OPT_PATH) and os.path.exists(RF_OPT_PATH):
+        return joblib.load(LR_OPT_PATH), joblib.load(RF_OPT_PATH), True
+    return None, None, False
+
+@st.cache_data
+def load_dados_s3():
+    res = pd.read_csv(S3_RES_PATH) if os.path.exists(S3_RES_PATH) else None
+    cv  = pd.read_csv(S3_CV_PATH)  if os.path.exists(S3_CV_PATH)  else None
+    lc  = pd.read_csv(S3_LC_PATH)  if os.path.exists(S3_LC_PATH)  else None
+    return res, cv, lc
+
 # ---------------------------------------------------------------------------
 # Carrega dados e modelos no topo do script (uma vez por sessão)
 # ---------------------------------------------------------------------------
@@ -103,6 +124,9 @@ try:
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}\nExecute `python main_sprint2.py` para gerar os modelos.")
     st.stop()
+
+lr_opt, rf_opt, sprint3_disponivel = load_modelos_s3()
+df_res_s3, df_cv_s3, df_lc_s3 = load_dados_s3()
 
 # ---------------------------------------------------------------------------
 # Pré-computa métricas do conjunto de teste (rápido — 300 amostras)
@@ -165,9 +189,15 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown("#### Sprints")
-    st.markdown("""
+    badge_s3 = (
+        "<span class='badge badge-s3'>✅ Sprint 3 — Otimização</span>"
+        if sprint3_disponivel
+        else "<span class='badge' style='background:#f0f0f0;color:#999;'>⏳ Sprint 3 — Otimização</span>"
+    )
+    st.markdown(f"""
     <span class='badge badge-ok'>✅ Sprint 1 — EDA</span><br>
-    <span class='badge badge-s2'>✅ Sprint 2 — Modelagem</span>
+    <span class='badge badge-s2'>✅ Sprint 2 — Modelagem</span><br>
+    {badge_s3}
     """, unsafe_allow_html=True)
 
     st.markdown("---")
@@ -186,10 +216,15 @@ with col_h1:
     st.markdown("# 🎓 Sistema de Predição de Evasão Escolar")
     st.caption("Análise exploratória · Modelagem Sprint 2 · Predição individual")
 with col_h2:
+    badge_s3_header = (
+        "<span class='badge badge-s3' style='font-size:0.8rem;'>Sprint 3 ✅</span>"
+        if sprint3_disponivel else ""
+    )
     st.markdown(f"""
     <div style='text-align:right; padding-top:10px;'>
         <span class='badge badge-ok' style='font-size:0.8rem;'>Sprint 1 ✅</span>&nbsp;
-        <span class='badge badge-s2' style='font-size:0.8rem;'>Sprint 2 ✅</span>
+        <span class='badge badge-s2' style='font-size:0.8rem;'>Sprint 2 ✅</span>&nbsp;
+        {badge_s3_header}
     </div>""", unsafe_allow_html=True)
 
 st.markdown("---")
@@ -216,10 +251,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ---------------------------------------------------------------------------
 # TABS
 # ---------------------------------------------------------------------------
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     "📊  Análise Exploratória (Sprint 1)",
     "🤖  Comparação de Modelos (Sprint 2)",
     "🔍  Predição Individual",
+    "⚡  Otimização (Sprint 3)",
 ])
 
 # ============================================================
@@ -612,3 +648,221 @@ with tab3:
             aluno_df = pd.DataFrame([r["aluno"]])
             st.dataframe(aluno_df, use_container_width=True, hide_index=True)
             st.caption(f"Modelo: **{r['modelo']}**")
+
+
+# ============================================================
+# TAB 4 — Otimização de Modelos (Sprint 3)
+# ============================================================
+CORES_S3 = {"Regressão Logística": "#8e44ad", "Random Forest": "#e67e22"}
+
+with tab4:
+    st.markdown('<p class="section-label">Sprint 3 — Otimização de Hiperparâmetros e Avaliação Avançada</p>', unsafe_allow_html=True)
+
+    if not sprint3_disponivel:
+        st.warning(
+            "**Sprint 3 ainda não foi executada.**\n\n"
+            "Execute `python main_sprint3.py` para gerar os modelos otimizados e habilitar esta aba.",
+            icon="⚠️",
+        )
+        st.stop()
+
+    with st.expander("ℹ️ Detalhes da Otimização", expanded=False):
+        ei1, ei2, ei3 = st.columns(3)
+        ei1.info("**Método**\n\nGridSearchCV\n\nStratifiedKFold (5 folds)")
+        ei2.info("**LR — Grade**\n\nC: [0.01, 0.1, 1, 10, 100]\nsolver: [lbfgs, liblinear]")
+        ei3.info("**RF — Grade**\n\nn_estimators: [50, 100, 200]\nmax_depth: [None, 5, 10, 15]")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Pré-computa métricas dos modelos otimizados
+    resultados_s3 = {}
+    for nome, modelo in [("Regressão Logística", lr_opt), ("Random Forest", rf_opt)]:
+        y_pred  = modelo.predict(X_test_prep)
+        y_proba = modelo.predict_proba(X_test_prep)[:, 1]
+        resultados_s3[nome] = {
+            "y_pred":  y_pred,
+            "y_proba": y_proba,
+            "metricas": {
+                "Acurácia": round(accuracy_score(y_test, y_pred), 4),
+                "Precisão": round(precision_score(y_test, y_pred, zero_division=0), 4),
+                "Recall":   round(recall_score(y_test, y_pred, zero_division=0), 4),
+                "F1-Score": round(f1_score(y_test, y_pred, zero_division=0), 4),
+                "ROC-AUC":  round(roc_auc_score(y_test, y_proba), 4),
+            },
+        }
+    melhor_s3 = max(resultados_s3, key=lambda n: resultados_s3[n]["metricas"]["ROC-AUC"])
+
+    # ---------- Comparação Base vs Otimizado ----------
+    st.markdown("#### Base vs Otimizado — Comparação de Métricas")
+    if df_res_s3 is not None:
+        cores_tipo = {"base": "#bdc3c7", "otimizado": "#8e44ad"}
+        fig_bvo = go.Figure()
+        for _, row in df_res_s3.iterrows():
+            rotulo = row["modelo"]
+            cor    = cores_tipo.get(row["tipo"], "#ccc")
+            metricas_plot = ["Acurácia", "F1-Score", "ROC-AUC"]
+            vals = [row[m] for m in metricas_plot]
+            fig_bvo.add_trace(go.Bar(
+                name=rotulo, x=metricas_plot, y=vals,
+                text=[f"{v:.4f}" for v in vals],
+                textposition="outside",
+                marker_color=cor,
+            ))
+        fig_bvo.update_layout(
+            barmode="group", template="plotly_white",
+            yaxis=dict(range=[0.87, 1.02], title="Valor"),
+            xaxis_title="", legend_title_text="Modelo",
+            margin=dict(t=20, b=10), height=380,
+        )
+        st.plotly_chart(fig_bvo, use_container_width=True)
+
+    # ---------- Métricas dos modelos otimizados ----------
+    st.markdown("#### Métricas — Modelos Otimizados")
+    col_s3m1, col_s3m2 = st.columns(2)
+    for col_ui, nome in zip([col_s3m1, col_s3m2], resultados_s3):
+        m = resultados_s3[nome]["metricas"]
+        with col_ui:
+            crown = " 🥇" if nome == melhor_s3 else ""
+            st.markdown(f"**{nome}{crown}**")
+            sa1, sa2, sa3 = st.columns(3)
+            sa1.metric("Acurácia",  f"{m['Acurácia']:.4f}")
+            sa2.metric("F1-Score",  f"{m['F1-Score']:.4f}")
+            sa3.metric("ROC-AUC",   f"{m['ROC-AUC']:.4f}")
+            sa4, sa5 = st.columns(2)
+            sa4.metric("Precisão",  f"{m['Precisão']:.4f}")
+            sa5.metric("Recall",    f"{m['Recall']:.4f}")
+
+    # ---------- Melhores hiperparâmetros ----------
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("#### Melhores Hiperparâmetros Encontrados")
+    col_hp1, col_hp2 = st.columns(2)
+    with col_hp1:
+        st.markdown("**Regressão Logística Otimizada**")
+        params_lr = {
+            "C":        lr_opt.C,
+            "solver":   lr_opt.solver,
+            "penalty":  lr_opt.penalty,
+            "max_iter": lr_opt.max_iter,
+        }
+        st.dataframe(
+            pd.DataFrame(params_lr.items(), columns=["Parâmetro", "Valor"]),
+            use_container_width=True, hide_index=True,
+        )
+    with col_hp2:
+        st.markdown("**Random Forest Otimizado**")
+        params_rf = {
+            "n_estimators":      rf_opt.n_estimators,
+            "max_depth":         str(rf_opt.max_depth),
+            "min_samples_split": rf_opt.min_samples_split,
+        }
+        st.dataframe(
+            pd.DataFrame(params_rf.items(), columns=["Parâmetro", "Valor"]),
+            use_container_width=True, hide_index=True,
+        )
+
+    # ---------- Validação Cruzada ----------
+    st.markdown("#### Validação Cruzada — 5-Fold Estratificada")
+    if df_cv_s3 is not None:
+        metricas_cv_nomes = {
+            "accuracy": "Acurácia",
+            "precision": "Precisão",
+            "recall": "Recall",
+            "f1": "F1-Score",
+            "roc_auc": "ROC-AUC",
+        }
+        col_cv1, col_cv2 = st.columns(2)
+        for col_ui, nome_modelo in zip([col_cv1, col_cv2], df_cv_s3["modelo"].tolist()):
+            linha = df_cv_s3[df_cv_s3["modelo"] == nome_modelo].iloc[0]
+            with col_ui:
+                st.markdown(f"**{nome_modelo}**")
+                rows_cv = []
+                for chave, rotulo in metricas_cv_nomes.items():
+                    rows_cv.append({
+                        "Métrica": rotulo,
+                        "Média":   f"{linha[f'{chave}_media']:.4f}",
+                        "Desvio":  f"± {linha[f'{chave}_std']:.4f}",
+                    })
+                st.dataframe(
+                    pd.DataFrame(rows_cv),
+                    use_container_width=True, hide_index=True,
+                )
+
+    # ---------- Curvas de Aprendizado ----------
+    if df_lc_s3 is not None:
+        st.markdown("#### Curvas de Aprendizado (ROC-AUC)")
+        fig_lc = go.Figure()
+        for nome in df_lc_s3["modelo"].unique():
+            subset = df_lc_s3[df_lc_s3["modelo"] == nome]
+            cor = CORES_S3.get(nome, "#666")
+            fig_lc.add_trace(go.Scatter(
+                x=subset["tamanho_treino"], y=subset["auc_val_media"],
+                mode="lines+markers", name=f"{nome} (validação)",
+                line=dict(color=cor, width=2.5),
+                error_y=dict(type="data", array=subset["auc_val_std"].tolist(), visible=True),
+            ))
+            fig_lc.add_trace(go.Scatter(
+                x=subset["tamanho_treino"], y=subset["auc_treino_media"],
+                mode="lines", name=f"{nome} (treino)",
+                line=dict(color=cor, width=1.5, dash="dot"),
+            ))
+        fig_lc.update_layout(
+            template="plotly_white",
+            xaxis_title="Tamanho do conjunto de treino",
+            yaxis_title="ROC-AUC",
+            legend=dict(x=0.55, y=0.08),
+            height=400, margin=dict(t=10, b=10),
+        )
+        st.plotly_chart(fig_lc, use_container_width=True)
+
+    # ---------- Curvas Precisão-Recall ----------
+    st.markdown("#### Curvas Precisão-Recall")
+    fig_pr = go.Figure()
+    for nome in resultados_s3:
+        prec, rec, _ = precision_recall_curve(
+            y_test, resultados_s3[nome]["y_proba"]
+        )
+        ap = average_precision_score(y_test, resultados_s3[nome]["y_proba"])
+        fig_pr.add_trace(go.Scatter(
+            x=rec, y=prec, mode="lines",
+            name=f"{nome}  (AP = {ap:.4f})",
+            line=dict(width=2.5, color=CORES_S3.get(nome, "#666")),
+        ))
+    fig_pr.add_hline(
+        y=y_test.mean(), line_dash="dash", line_color="gray",
+        annotation_text=f"Baseline ({y_test.mean():.2f})", annotation_position="right",
+    )
+    fig_pr.update_layout(
+        template="plotly_white",
+        xaxis_title="Recall", yaxis_title="Precisão",
+        xaxis=dict(range=[0, 1]), yaxis=dict(range=[0, 1.05]),
+        legend=dict(x=0.35, y=0.08),
+        height=400, margin=dict(t=10, b=10),
+    )
+    st.plotly_chart(fig_pr, use_container_width=True)
+
+    # ---------- Calibração ----------
+    st.markdown("#### Calibração dos Modelos")
+    st.caption("Quanto mais próxima da diagonal, mais calibrado é o modelo")
+    fig_cal = go.Figure()
+    fig_cal.add_trace(go.Scatter(
+        x=[0, 1], y=[0, 1], mode="lines", name="Calibração perfeita",
+        line=dict(dash="dash", color="gray", width=1.5),
+    ))
+    for nome in resultados_s3:
+        y_proba = resultados_s3[nome]["y_proba"]
+        frac_pos, media_prev = calibration_curve(y_test, y_proba, n_bins=8)
+        fig_cal.add_trace(go.Scatter(
+            x=media_prev, y=frac_pos, mode="lines+markers",
+            name=nome,
+            line=dict(width=2.5, color=CORES_S3.get(nome, "#666")),
+            marker=dict(size=8),
+        ))
+    fig_cal.update_layout(
+        template="plotly_white",
+        xaxis_title="Probabilidade prevista (média)",
+        yaxis_title="Fração de positivos reais",
+        xaxis=dict(range=[0, 1]), yaxis=dict(range=[0, 1]),
+        legend=dict(x=0.05, y=0.9),
+        height=400, margin=dict(t=10, b=10),
+    )
+    st.plotly_chart(fig_cal, use_container_width=True)

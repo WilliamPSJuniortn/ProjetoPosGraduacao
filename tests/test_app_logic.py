@@ -10,11 +10,13 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score, confusion_matrix, roc_curve,
+    average_precision_score, precision_recall_curve,
 )
+from sklearn.calibration import calibration_curve
 
 BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
@@ -197,6 +199,117 @@ try:
     ok(f"Estrutura session_state OK — prob={prob:.1f}%  pred={pred}")
 except Exception as e:
     fail(f"Session state: {e}")
+
+# -----------------------------------------------------------------------
+print("\n[12] Sprint 3 — Carregamento dos modelos otimizados")
+# -----------------------------------------------------------------------
+s3_disponivel = False
+lr_opt = rf_opt = None
+
+try:
+    lr_opt = joblib.load(os.path.join(BASE, "models", "modelo_lr_otimizado.pkl"))
+    ok("modelo_lr_otimizado.pkl carregado")
+except Exception as e:
+    fail(f"modelo_lr_otimizado.pkl: {e} — execute python main_sprint3.py")
+
+try:
+    rf_opt = joblib.load(os.path.join(BASE, "models", "modelo_rf_otimizado.pkl"))
+    ok("modelo_rf_otimizado.pkl carregado")
+    s3_disponivel = lr_opt is not None
+except Exception as e:
+    fail(f"modelo_rf_otimizado.pkl: {e} — execute python main_sprint3.py")
+
+# -----------------------------------------------------------------------
+print("\n[13] Sprint 3 — Arquivos de resultados")
+# -----------------------------------------------------------------------
+try:
+    df_res = pd.read_csv(os.path.join(BASE, "data", "resultados_sprint3.csv"))
+    assert len(df_res) == 4, f"Esperado 4 linhas, obtido {len(df_res)}"
+    assert "ROC-AUC" in df_res.columns
+    ok(f"resultados_sprint3.csv: {len(df_res)} linhas, colunas={list(df_res.columns)}")
+except Exception as e:
+    fail(f"resultados_sprint3.csv: {e}")
+
+try:
+    df_cv = pd.read_csv(os.path.join(BASE, "data", "cv_resultados_sprint3.csv"))
+    assert len(df_cv) == 2, f"Esperado 2 linhas (um por modelo), obtido {len(df_cv)}"
+    assert "roc_auc_media" in df_cv.columns
+    ok(f"cv_resultados_sprint3.csv: {len(df_cv)} modelos, AUC médio: "
+       f"LR={df_cv[df_cv['modelo']=='Regressão Logística']['roc_auc_media'].values[0]:.4f} | "
+       f"RF={df_cv[df_cv['modelo']=='Random Forest']['roc_auc_media'].values[0]:.4f}")
+except Exception as e:
+    fail(f"cv_resultados_sprint3.csv: {e}")
+
+try:
+    df_lc = pd.read_csv(os.path.join(BASE, "data", "learning_curves_sprint3.csv"))
+    assert len(df_lc) >= 8, f"Esperado >= 8 pontos, obtido {len(df_lc)}"
+    assert "auc_val_media" in df_lc.columns
+    ok(f"learning_curves_sprint3.csv: {len(df_lc)} pontos de curva de aprendizado")
+except Exception as e:
+    fail(f"learning_curves_sprint3.csv: {e}")
+
+# -----------------------------------------------------------------------
+print("\n[14] Sprint 3 — Métricas dos modelos otimizados")
+# -----------------------------------------------------------------------
+if s3_disponivel:
+    for nome, modelo in [("LR Otimizado", lr_opt), ("RF Otimizado", rf_opt)]:
+        try:
+            y_pred  = modelo.predict(X_test_prep)
+            y_proba = modelo.predict_proba(X_test_prep)[:, 1]
+            auc     = roc_auc_score(y_test, y_proba)
+            acc     = accuracy_score(y_test, y_pred)
+            assert auc  > 0.90, f"ROC-AUC muito baixo: {auc:.4f}"
+            assert acc  > 0.90, f"Acurácia muito baixa: {acc:.4f}"
+            ok(f"{nome}: acc={acc:.4f}  auc={auc:.4f}")
+        except Exception as e:
+            fail(f"{nome} métricas: {e}")
+else:
+    fail("Modelos otimizados não disponíveis — pule este bloco após rodar main_sprint3.py")
+
+# -----------------------------------------------------------------------
+print("\n[15] Sprint 3 — Ganho em relação ao modelo base")
+# -----------------------------------------------------------------------
+if s3_disponivel:
+    try:
+        auc_lr_base = roc_auc_score(y_test, lr.predict_proba(X_test_prep)[:, 1])
+        auc_rf_base = roc_auc_score(y_test, rf.predict_proba(X_test_prep)[:, 1])
+        auc_lr_opt  = roc_auc_score(y_test, lr_opt.predict_proba(X_test_prep)[:, 1])
+        auc_rf_opt  = roc_auc_score(y_test, rf_opt.predict_proba(X_test_prep)[:, 1])
+        ganho_lr = auc_lr_opt - auc_lr_base
+        ganho_rf = auc_rf_opt - auc_rf_base
+        ok(f"Ganho LR: {ganho_lr:+.4f}  (base={auc_lr_base:.4f} → opt={auc_lr_opt:.4f})")
+        ok(f"Ganho RF: {ganho_rf:+.4f}  (base={auc_rf_base:.4f} → opt={auc_rf_opt:.4f})")
+    except Exception as e:
+        fail(f"Ganho de desempenho: {e}")
+
+# -----------------------------------------------------------------------
+print("\n[16] Sprint 3 — Average Precision e curva Precisão-Recall")
+# -----------------------------------------------------------------------
+if s3_disponivel:
+    for nome, modelo in [("LR Otimizado", lr_opt), ("RF Otimizado", rf_opt)]:
+        try:
+            y_proba = modelo.predict_proba(X_test_prep)[:, 1]
+            ap      = average_precision_score(y_test, y_proba)
+            prec, rec, _ = precision_recall_curve(y_test, y_proba)
+            assert ap > 0.80, f"Average Precision muito baixa: {ap:.4f}"
+            assert len(prec) >= 3
+            ok(f"{nome}: Average Precision={ap:.4f}  |  {len(prec)} pontos na curva P-R")
+        except Exception as e:
+            fail(f"{nome} P-R curve: {e}")
+
+# -----------------------------------------------------------------------
+print("\n[17] Sprint 3 — Calibração dos modelos otimizados")
+# -----------------------------------------------------------------------
+if s3_disponivel:
+    for nome, modelo in [("LR Otimizado", lr_opt), ("RF Otimizado", rf_opt)]:
+        try:
+            y_proba = modelo.predict_proba(X_test_prep)[:, 1]
+            frac_pos, media_prev = calibration_curve(y_test, y_proba, n_bins=5)
+            desvio_medio = float(np.mean(np.abs(frac_pos - media_prev)))
+            assert desvio_medio < 0.25, f"Modelo muito descalibrado: desvio={desvio_medio:.4f}"
+            ok(f"{nome}: desvio médio de calibração = {desvio_medio:.4f}")
+        except Exception as e:
+            fail(f"{nome} calibração: {e}")
 
 # -----------------------------------------------------------------------
 print("\n" + "=" * 55)

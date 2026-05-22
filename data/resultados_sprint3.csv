@@ -1,0 +1,5 @@
+modelo,tipo,Acurácia,Precisão,Recall,F1-Score,ROC-AUC
+LR Base,base,0.9633,0.954,0.9222,0.9379,0.9925
+LR Otimizado,otimizado,0.96,0.9535,0.9111,0.9318,0.9917
+RF Base,base,0.9633,0.9647,0.9111,0.9371,0.9845
+RF Otimizado,otimizado,0.96,0.9643,0.9,0.931,0.9895
